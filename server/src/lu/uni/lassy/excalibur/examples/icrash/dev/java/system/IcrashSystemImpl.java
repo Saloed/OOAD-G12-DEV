@@ -493,7 +493,7 @@ public class IcrashSystemImpl extends UnicastRemoteObject implements
                     aCrisisReminderPeriod, aMaxCrisisReminderPeriod, aClock,
                     aVpStarted);
             /* ENV
-			PostF 2 the actMsrCreator actor instance is initiated (remember that since the
+            PostF 2 the actMsrCreator actor instance is initiated (remember that since the
 			oeCreateSystemAndEnvironment is a special event, its role is to make consistent the post
 			state, thus creating the actor and its interfaces is required even though the sending 
 			of this message	logically would need the actor and its interfaces to already exist ...).
@@ -891,7 +891,7 @@ public class IcrashSystemImpl extends UnicastRemoteObject implements
                 }
 
                 sendStatisticForAdmins(new DtCoordStatistic(new DtCoordinatorID(theActCoordinator.getLogin().value),
-                        new PtString("HANDLE"),  ctState.clock.time));
+                        new PtString("HANDLE"), ctState.clock.time));
 
                 return new PtBoolean(true);
             }
@@ -1034,7 +1034,7 @@ public class IcrashSystemImpl extends UnicastRemoteObject implements
                 }
 
                 sendStatisticForAdmins(new DtCoordStatistic(new DtCoordinatorID(theActCoordinator.getLogin().value),
-                        new PtString("FREE"),  ctState.clock.time));
+                        new PtString("FREE"), ctState.clock.time));
 
                 return new PtBoolean(true);
             }
@@ -1081,8 +1081,9 @@ public class IcrashSystemImpl extends UnicastRemoteObject implements
                         //PostF1
                         PtString aMessage = new PtString("You are logged ! Welcome ...");
                         currentRequestingAuthenticatedActor.ieMessage(aMessage);
-                        sendStatisticForAdmins(new DtCoordStatistic(new DtCoordinatorID(authActorCheck.getLogin().value),
-                                new PtString("FREE"), ctState.clock.time));
+                        if (authActorCheck instanceof ActCoordinatorImpl)
+                            sendStatisticForAdmins(new DtCoordStatistic(new DtCoordinatorID(authActorCheck.getLogin().value),
+                                    new PtString("FREE"), ctState.clock.time));
                         return new PtBoolean(true);
                     }
                 }
@@ -1142,8 +1143,9 @@ public class IcrashSystemImpl extends UnicastRemoteObject implements
                         //PostF1
                         PtString aMessage = new PtString("You are logged ! Welcome ...");
                         currentRequestingAuthenticatedActor.ieMessage(aMessage);
-                        sendStatisticForAdmins(new DtCoordStatistic(new DtCoordinatorID(authActorCheck.getLogin().value),
-                                new PtString("FREE"), ctState.clock.time));
+                        if (authActorCheck instanceof ActCoordinatorImpl)
+                            sendStatisticForAdmins(new DtCoordStatistic(new DtCoordinatorID(authActorCheck.getLogin().value),
+                                    new PtString("FREE"), ctState.clock.time));
                         return new PtBoolean(true);
                     }
                 }
