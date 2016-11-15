@@ -6,8 +6,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="02da47f0-f25f-4282-912d-09fd238577db" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/lu/uni/lassy/excalibur/examples/icrash/dev/view/gui/admin/ICrashAdminGUI.fxml" afterPath="$PROJECT_DIR$/client/src/lu/uni/lassy/excalibur/examples/icrash/dev/view/gui/admin/ICrashAdminGUI.fxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/lu/uni/lassy/excalibur/examples/icrash/dev/view/gui/admin/ICrashAdminGUIController.java" afterPath="$PROJECT_DIR$/client/src/lu/uni/lassy/excalibur/examples/icrash/dev/view/gui/admin/ICrashAdminGUIController.java" />
     </list>
     <ignored path="iCrash.iws" />
@@ -169,12 +169,12 @@
       <file leaf-file-name="ICrashAdminGUIController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/client/src/lu/uni/lassy/excalibur/examples/icrash/dev/view/gui/admin/ICrashAdminGUIController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="85" column="49" selection-start-line="85" selection-start-column="49" selection-end-line="85" selection-end-column="49" />
+            <state relative-caret-position="384">
+              <caret line="195" column="47" selection-start-line="195" selection-start-column="47" selection-end-line="195" selection-end-column="47" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#5809#5810#0" expanded="true" />
-                <element signature="e#5862#5863#0" expanded="true" />
+                <element signature="e#5634#5635#0" expanded="true" />
+                <element signature="e#5687#5688#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -870,7 +870,7 @@
       <workItem from="1478683173691" duration="4310000" />
       <workItem from="1479166957179" duration="2092000" />
       <workItem from="1479170281295" duration="8899000" />
-      <workItem from="1479181068907" duration="8070000" />
+      <workItem from="1479181068907" duration="9119000" />
     </task>
     <task id="LOCAL-00001" summary="added BioAPI lib">
       <created>1479170367338</created>
@@ -928,11 +928,18 @@
       <option name="project" value="LOCAL" />
       <updated>1479183601543</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="added modal window for add/delete coordinator">
+      <created>1479189520557</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1479189520557</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23806000" />
+    <option name="totallyTimeSpent" value="24855000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -946,7 +953,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32868218" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37209302" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32868218" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32868218" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1037,7 +1044,8 @@
     <MESSAGE value="added biometric update" />
     <MESSAGE value="change admin name to admin/admin" />
     <MESSAGE value="added database support for biometric authentication" />
-    <option name="LAST_COMMIT_MESSAGE" value="added database support for biometric authentication" />
+    <MESSAGE value="added modal window for add/delete coordinator" />
+    <option name="LAST_COMMIT_MESSAGE" value="added modal window for add/delete coordinator" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1472,12 +1480,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client/src/lu/uni/lassy/excalibur/examples/icrash/dev/view/gui/admin/ICrashAdminGUIController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="85" column="49" selection-start-line="85" selection-start-column="49" selection-end-line="85" selection-end-column="49" />
+        <state relative-caret-position="384">
+          <caret line="195" column="47" selection-start-line="195" selection-start-column="47" selection-end-line="195" selection-end-column="47" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#5809#5810#0" expanded="true" />
-            <element signature="e#5862#5863#0" expanded="true" />
+            <element signature="e#5634#5635#0" expanded="true" />
+            <element signature="e#5687#5688#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -98,12 +98,6 @@ public class ICrashAdminGUIController extends AbstractAuthGUIController {
     private BorderPane brdpnAdmin;
 
     /**
-     * The anchorpane that will have the add or delete coordinator controls added/removed from it
-     */
-    @FXML
-    private AnchorPane anchrpnCoordinatorDetails;
-
-    /**
      * The button that shows the controls for adding a coordinator
      */
     @FXML
@@ -200,8 +194,6 @@ public class ICrashAdminGUIController extends AbstractAuthGUIController {
             txtfldAdminUserName.setText("");
             psswrdfldAdminPassword.setText("");
             txtfldAdminUserName.requestFocus();
-            for (int i = anchrpnCoordinatorDetails.getChildren().size() - 1; i >= 0; i--)
-                anchrpnCoordinatorDetails.getChildren().remove(i);
         }
 
     }
