@@ -235,9 +235,9 @@ public class ICrashAdminGUIController extends AbstractAuthGUIController {
      */
     public void setUpTables() {
         setUpMessageTables(tblvwAdminMessages);
-        colCoordId.setCellValueFactory(new PropertyValueFactory<TableViewDtCoordStatisticWrapper, String>("coordId"));
-        colState.setCellValueFactory(new PropertyValueFactory<TableViewDtCoordStatisticWrapper, String>("state"));
-        colTime.setCellValueFactory(new PropertyValueFactory<TableViewDtCoordStatisticWrapper, Integer>("time"));
+        colCoordId.setCellValueFactory(new PropertyValueFactory<>("coordId"));
+        colState.setCellValueFactory(new PropertyValueFactory<>("state"));
+        colTime.setCellValueFactory(new PropertyValueFactory<>("time"));
     }
 
     /**

@@ -1,7 +1,7 @@
 package lu.uni.lassy.excalibur.examples.icrash.dev.java.system.types.primary;
 
 import lu.uni.lassy.excalibur.examples.icrash.dev.java.system.types.design.JIntIs;
-import lu.uni.lassy.excalibur.examples.icrash.dev.java.types.stdlib.DtMinute;
+import lu.uni.lassy.excalibur.examples.icrash.dev.java.types.stdlib.DtTime;
 import lu.uni.lassy.excalibur.examples.icrash.dev.java.types.stdlib.PtBoolean;
 import lu.uni.lassy.excalibur.examples.icrash.dev.java.types.stdlib.PtString;
 
@@ -30,7 +30,7 @@ public class DtCoordStatistic implements Serializable, JIntIs {
     /**
      * The datatype coordTime.
      */
-    public DtMinute coordTime;
+    public DtTime coordTime;
 
 
     /**
@@ -40,7 +40,7 @@ public class DtCoordStatistic implements Serializable, JIntIs {
      * @param coordState The datatype of PtString to assign to the Coordinator Statistic
      * @param coordTime  The datatype of DtMinute to assign to the Coordinator Statistic
      */
-    public DtCoordStatistic(DtCoordinatorID aCoordId, PtString coordState, DtMinute coordTime) {
+    public DtCoordStatistic(DtCoordinatorID aCoordId, PtString coordState, DtTime coordTime) {
         this.coordId = aCoordId;
         this.coordState = coordState;
         this.coordTime = coordTime;
@@ -48,6 +48,9 @@ public class DtCoordStatistic implements Serializable, JIntIs {
 
     @Override
     public PtBoolean is() {
-        return new PtBoolean(coordId.is().getValue() && coordTime.value.getValue() >= 0);
+        return new PtBoolean(coordId.is().getValue() &&
+                (coordTime.hour.value.getValue() >= 0 ||
+                        coordTime.minute.value.getValue() >= 0 ||
+                        coordTime.second.value.getValue() >= 0));
     }
 }

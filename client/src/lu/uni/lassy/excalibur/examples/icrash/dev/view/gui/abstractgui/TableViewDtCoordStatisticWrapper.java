@@ -6,9 +6,9 @@ public class TableViewDtCoordStatisticWrapper {
 
     private String coordId;
     private String state;
-    private Integer time;
+    private String time;
 
-    public TableViewDtCoordStatisticWrapper(String coordId, String state, int time) {
+    public TableViewDtCoordStatisticWrapper(String coordId, String state, String time) {
         this.coordId = coordId;
         this.state = state;
         this.time = time;
@@ -17,7 +17,7 @@ public class TableViewDtCoordStatisticWrapper {
     public TableViewDtCoordStatisticWrapper(DtCoordStatistic statistic) {
         this.coordId = statistic.coordId.toString();
         this.state = statistic.coordState.getValue();
-        this.time = statistic.coordTime.value.getValue();
+        this.time = statistic.coordTime.toString();
     }
 
     public String getCoordId() {
@@ -36,11 +36,11 @@ public class TableViewDtCoordStatisticWrapper {
         this.state = state;
     }
 
-    public Integer getTime() {
+    public String getTime() {
         return time;
     }
 
-    public void setTime(Integer time) {
+    public void setTime(String time) {
         this.time = time;
     }
 }

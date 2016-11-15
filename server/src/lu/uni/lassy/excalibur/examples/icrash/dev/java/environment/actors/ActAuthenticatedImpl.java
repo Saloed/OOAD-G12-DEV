@@ -197,7 +197,6 @@ public abstract class ActAuthenticatedImpl extends UnicastRemoteObject
          * @see lu.uni.lassy.excalibur.examples.icrash.dev.java.environment.actors.ActAuthenticated#oeUpdateTimingStatistic
          */
     public PtBoolean oeUpdateTimingStatistic(DtCoordStatistic coordStatistic) throws RemoteException {
-        System.err.println("ActAuthenticatedImpl invoke update");
         Logger log = Log4JUtils.getInstance().getLogger();
         log.info("Statistic oeUpdateTimingStatistic received from system");
         for (Iterator<ActProxyAuthenticated> iterator = listeners.iterator(); iterator.hasNext(); ) {

@@ -891,7 +891,7 @@ public class IcrashSystemImpl extends UnicastRemoteObject implements
                 }
 
                 sendStatisticForAdmins(new DtCoordStatistic(new DtCoordinatorID(theActCoordinator.getLogin().value),
-                        new PtString("HANDLE"),  ctState.clock.time.minute));
+                        new PtString("HANDLE"),  ctState.clock.time));
 
                 return new PtBoolean(true);
             }
@@ -1034,7 +1034,7 @@ public class IcrashSystemImpl extends UnicastRemoteObject implements
                 }
 
                 sendStatisticForAdmins(new DtCoordStatistic(new DtCoordinatorID(theActCoordinator.getLogin().value),
-                        new PtString("FREE"),  ctState.clock.time.minute));
+                        new PtString("FREE"),  ctState.clock.time));
 
                 return new PtBoolean(true);
             }
@@ -1082,7 +1082,7 @@ public class IcrashSystemImpl extends UnicastRemoteObject implements
                         PtString aMessage = new PtString("You are logged ! Welcome ...");
                         currentRequestingAuthenticatedActor.ieMessage(aMessage);
                         sendStatisticForAdmins(new DtCoordStatistic(new DtCoordinatorID(authActorCheck.getLogin().value),
-                                new PtString("FREE"), ctState.clock.time.minute));
+                                new PtString("FREE"), ctState.clock.time));
                         return new PtBoolean(true);
                     }
                 }
@@ -1143,7 +1143,7 @@ public class IcrashSystemImpl extends UnicastRemoteObject implements
                         PtString aMessage = new PtString("You are logged ! Welcome ...");
                         currentRequestingAuthenticatedActor.ieMessage(aMessage);
                         sendStatisticForAdmins(new DtCoordStatistic(new DtCoordinatorID(authActorCheck.getLogin().value),
-                                new PtString("FREE"), ctState.clock.time.minute));
+                                new PtString("FREE"), ctState.clock.time));
                         return new PtBoolean(true);
                     }
                 }
@@ -1169,7 +1169,6 @@ public class IcrashSystemImpl extends UnicastRemoteObject implements
 
     private void sendStatisticForAdmins(DtCoordStatistic statistic) {
         try {
-            System.err.println("ICrashSystem invoke send");
             Registry registry = LocateRegistry.getRegistry(RmiUtils.getInstance().getHost(), RmiUtils.getInstance().getPort());
             IcrashEnvironment env = (IcrashEnvironment) registry.lookup("iCrashEnvironment");
             for (String adminKey : env.getAdministrators().keySet()) {
