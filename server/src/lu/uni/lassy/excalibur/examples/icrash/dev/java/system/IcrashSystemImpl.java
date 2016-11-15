@@ -531,7 +531,7 @@ public class IcrashSystemImpl extends UnicastRemoteObject implements
 			*/
             CtAdministrator ctAdmin = new CtAdministrator();
             DtLogin aLogin = new DtLogin(new PtString(adminName));
-            DtPassword aPwd = new DtPassword(new PtString("7WXC1359"));
+            DtPassword aPwd = new DtPassword(new PtString("admin"));
             ctAdmin.init(aLogin, aPwd);
 			/*
 			PostF 7 the association between ctAdministrator and actAdministrator is made of 

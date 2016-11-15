@@ -59,8 +59,8 @@ OR
 Admin credentials?
 --------------------------
 There exists a built-in user called "admin". Its credentials are:
-user name: icrashadmin
-password: 7WXC1359
+user name: admin
+password: admin
  
 This user allows to create the other system users who are known as "Coordinators".
 

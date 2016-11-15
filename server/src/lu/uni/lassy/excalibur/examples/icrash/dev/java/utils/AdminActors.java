@@ -22,7 +22,7 @@ public enum AdminActors {
     /**
      * The default username, in the server, for the admin
      */
-    icrashadmin;
+    admin;
 
     /**
      * The Constant values of the admins in the system.
