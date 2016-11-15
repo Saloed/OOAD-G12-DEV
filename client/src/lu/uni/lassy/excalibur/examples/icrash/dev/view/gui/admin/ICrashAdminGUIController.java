@@ -15,6 +15,8 @@ package lu.uni.lassy.excalibur.examples.icrash.dev.view.gui.admin;
 import javafx.collections.ListChangeListener;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.geometry.Pos;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TableView;
@@ -23,6 +25,9 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 import lu.uni.lassy.excalibur.examples.icrash.dev.controller.AdminController;
 import lu.uni.lassy.excalibur.examples.icrash.dev.controller.SystemStateController;
 import lu.uni.lassy.excalibur.examples.icrash.dev.controller.exceptions.IncorrectActorException;
@@ -38,7 +43,6 @@ import lu.uni.lassy.excalibur.examples.icrash.dev.java.utils.Log4JUtils;
 import lu.uni.lassy.excalibur.examples.icrash.dev.model.Message;
 import lu.uni.lassy.excalibur.examples.icrash.dev.view.gui.abstractgui.AbstractAuthGUIController;
 import lu.uni.lassy.excalibur.examples.icrash.dev.view.gui.coordinator.CreateICrashCoordGUI;
-import org.bioapi.data.BIR;
 
 import java.net.URL;
 import java.rmi.NotBoundException;
@@ -59,7 +63,7 @@ import java.util.ResourceBundle;
 public class ICrashAdminGUIController extends AbstractAuthGUIController {
 
 	/*
-	* This section of controls and methods is to be replaced by modifications in the ICrash.fxml document from the sample skeleton controller
+    * This section of controls and methods is to be replaced by modifications in the ICrash.fxml document from the sample skeleton controller
 	* When replacing, remember to reassign the correct methods to the button event methods and set the correct types for the tableviews
 	*/
 
@@ -169,9 +173,9 @@ public class ICrashAdminGUIController extends AbstractAuthGUIController {
     void bttnBottomLoginPaneLogin_OnClick(ActionEvent event) {
         logon();
     }
-	
+
 	/*
-	 * Other things created for this controller
+     * Other things created for this controller
 	 */
 
     /**
@@ -201,15 +205,15 @@ public class ICrashAdminGUIController extends AbstractAuthGUIController {
         }
 
     }
-	/*
-	 * Methods used within the GUI
+    /*
+     * Methods used within the GUI
 	 */
 
     /**
      * Server has gone down.
      */
-	/* (non-Javadoc)
-	 * @see lu.uni.lassy.excalibur.examples.icrash.dev.view.gui.AbstractGUIController#serverHasGoneDown()
+    /* (non-Javadoc)
+     * @see lu.uni.lassy.excalibur.examples.icrash.dev.view.gui.AbstractGUIController#serverHasGoneDown()
 	 */
     protected void serverHasGoneDown() {
         logoff();
@@ -225,66 +229,76 @@ public class ICrashAdminGUIController extends AbstractAuthGUIController {
     /**
      * Shows the modify coordinator screen.
      *
-     * @param type The type of edit to be done, this could be add or delete
+     * @param type  The type of edit to be done, this could be add or delete
      */
     private void showCoordinatorScreen(TypeOfEdit type) {
-        for (int i = anchrpnCoordinatorDetails.getChildren().size() - 1; i >= 0; i--)
-            anchrpnCoordinatorDetails.getChildren().remove(i);
-        TextField txtfldUserID = new TextField();
-        TextField txtfldUserName = new TextField();
-        PasswordField psswrdfldPassword = new PasswordField();
-        txtfldUserID.setPromptText("User ID");
-        Button bttntypOK = null;
-        GridPane grdpn = new GridPane();
-        grdpn.add(txtfldUserID, 1, 1);
-        switch (type) {
-            case Add:
-                bttntypOK = new Button("Create");
-                txtfldUserName.setPromptText("User name");
-                psswrdfldPassword.setPromptText("Password");
-                grdpn.add(txtfldUserName, 1, 2);
-                grdpn.add(psswrdfldPassword, 1, 3);
-                grdpn.add(bttntypOK, 1, 4);
-                break;
-            case Delete:
-                bttntypOK = new Button("Delete");
-                grdpn.add(bttntypOK, 1, 2);
-                break;
-        }
-        bttntypOK.setDefaultButton(true);
-        bttntypOK.setOnAction(event -> {
-            if (!checkIfAllDialogHasBeenFilledIn(grdpn))
-                showWarningNoDataEntered();
-            else {
+
+        final Stage dialog = new Stage(StageStyle.TRANSPARENT);
+        dialog.initModality(Modality.WINDOW_MODAL);
+        GridPane pane = new GridPane();
+        Button confirm = new Button("Confirm");
+        TextField id = new TextField();
+        id.setPromptText("Coordinator ID");
+        TextField name = new TextField();
+        name.setPromptText("Coordinator name");
+        PasswordField pass = new PasswordField();
+        pass.setPromptText("Password");
+        if (type == TypeOfEdit.Add) {
+            pane.add(id, 0, 0);
+            pane.add(name, 0, 1);
+            pane.add(pass, 0, 2);
+            pane.add(confirm, 0, 3);
+            pane.setVgap(20);
+
+
+            confirm.setOnAction(event1 -> {
+                if (!checkIfAllDialogHasBeenFilledIn(pane)) {
+                    showWarningNoDataEntered();
+                    return;
+                }
                 try {
-                    DtCoordinatorID coordID = new DtCoordinatorID(new PtString(txtfldUserID.getText()));
-                    switch (type) {
-                        case Add:
-                            if (userController.oeAddCoordinator(txtfldUserID.getText(), txtfldUserName.getText(), psswrdfldPassword.getText()).getValue()) {
-                                listOfOpenWindows.add(new CreateICrashCoordGUI(coordID, systemstateController.getActCoordinator(txtfldUserName.getText())));
-                                anchrpnCoordinatorDetails.getChildren().remove(grdpn);
-                            } else
-                                showErrorMessage("Unable to add coordinator", "An error occured when adding the coordinator");
-                            break;
-                        case Delete:
-                            if (userController.oeDeleteCoordinator(txtfldUserID.getText()).getValue()) {
-                                listOfOpenWindows.stream().filter(window1 -> window1.getDtCoordinatorID().value.getValue().equals(coordID.value.getValue())).forEach(CreateICrashCoordGUI::closeWindow);
-                                anchrpnCoordinatorDetails.getChildren().remove(grdpn);
-                            } else
-                                showErrorMessage("Unable to delete coordinator", "An error occured when deleting the coordinator");
-                            break;
-                    }
+                    DtCoordinatorID coordID = new DtCoordinatorID(new PtString(id.getText()));
+                    if (userController.oeAddCoordinator(id.getText(), name.getText(), pass.getText()).getValue()) {
+                        listOfOpenWindows.add(new CreateICrashCoordGUI(coordID, systemstateController.getActCoordinator(name.getText())));
+
+                    } else
+                        showErrorMessage("Unable to add coordinator", "An error occured when adding the coordinator");
                 } catch (ServerOfflineException | ServerNotBoundException | IncorrectFormatException e) {
                     showExceptionErrorMessage(e);
                 }
-            }
-        });
-        anchrpnCoordinatorDetails.getChildren().add(grdpn);
-        AnchorPane.setTopAnchor(grdpn, 0.0);
-        AnchorPane.setLeftAnchor(grdpn, 0.0);
-        AnchorPane.setBottomAnchor(grdpn, 0.0);
-        AnchorPane.setRightAnchor(grdpn, 0.0);
-        txtfldUserID.requestFocus();
+                dialog.close();
+            });
+
+        } else {
+            pane.add(id, 0, 0);
+            pane.add(confirm, 0, 3);
+            pane.setVgap(50);
+
+            confirm.setOnAction(event1 -> {
+                if (!checkIfAllDialogHasBeenFilledIn(pane)) {
+                    showWarningNoDataEntered();
+                    return;
+                }
+                try {
+                    DtCoordinatorID coordID = new DtCoordinatorID(new PtString(id.getText()));
+
+                    if (userController.oeDeleteCoordinator(id.getText()).getValue()) {
+                        listOfOpenWindows.stream().filter(window1 -> window1.getDtCoordinatorID().value.getValue()
+                                .equals(coordID.value.getValue())).forEach(CreateICrashCoordGUI::closeWindow);
+                    } else
+                        showErrorMessage("Unable to delete coordinator", "An error occured when deleting the coordinator");
+                } catch (ServerOfflineException | ServerNotBoundException | IncorrectFormatException e) {
+                    showExceptionErrorMessage(e);
+                }
+                dialog.close();
+            });
+        }
+
+        pane.setAlignment(Pos.CENTER);
+        Scene scene = new Scene(pane, 200, 200);
+        dialog.setScene(scene);
+        dialog.showAndWait();
+
     }
 
     /* (non-Javadoc)
