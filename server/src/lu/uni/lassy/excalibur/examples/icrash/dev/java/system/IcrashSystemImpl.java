@@ -226,7 +226,7 @@ public class IcrashSystemImpl extends UnicastRemoteObject implements
         }
         return null;
     }
-	
+
 	/*
 	 * ********************************
 	 * New implementation operations 
@@ -1206,6 +1206,13 @@ public class IcrashSystemImpl extends UnicastRemoteObject implements
                 PtString aMessage = new PtString(
                         "Your biometric successfully updated");
                 currentRequestingAuthenticatedActor.ieMessage(aMessage);
+
+                if (user instanceof CtCoordinator) {
+                    DbCoordinators.updateCoordinator((CtCoordinator) user);
+                } else {
+                    log.error("Request bio update not for coordinator");
+                }
+
             }
             return new PtBoolean(true);
         } catch (Exception e) {

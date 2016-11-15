@@ -12,14 +12,12 @@
  ******************************************************************************/
 package lu.uni.lassy.excalibur.examples.icrash.dev.java.system.db;
 
-import lu.uni.lassy.excalibur.examples.icrash.dev.java.system.types.primary.CtCoordinator;
-import lu.uni.lassy.excalibur.examples.icrash.dev.java.system.types.primary.DtCoordinatorID;
-import lu.uni.lassy.excalibur.examples.icrash.dev.java.system.types.primary.DtLogin;
-import lu.uni.lassy.excalibur.examples.icrash.dev.java.system.types.primary.DtPassword;
+import lu.uni.lassy.excalibur.examples.icrash.dev.java.system.types.primary.*;
 import lu.uni.lassy.excalibur.examples.icrash.dev.java.types.stdlib.PtBoolean;
 import lu.uni.lassy.excalibur.examples.icrash.dev.java.types.stdlib.PtString;
 
 import java.sql.*;
+import java.util.Base64;
 import java.util.Hashtable;
 
 /**
@@ -47,11 +45,12 @@ public class DbCoordinators extends DbAbstract {
                 String id = aCtCoordinator.id.value.getValue();
                 String login = aCtCoordinator.login.value.getValue();
                 String pwd = aCtCoordinator.pwd.value.getValue();
-
+                byte[] bio = aCtCoordinator.bio.value;
+                String bioStr = Base64.getEncoder().encodeToString(bio);
                 log.debug("[DATABASE]-Insert coordinator");
                 int val = st.executeUpdate("INSERT INTO " + dbName + ".coordinators" +
-                        "(id,login,pwd)" +
-                        "VALUES(" + "'" + id + "'" + ",'" + login + "','" + pwd + "')");
+                        "(id,login,pwd,bio)" +
+                        "VALUES(" + "'" + id + "'" + ",'" + login + "','" + pwd + "','" + bioStr + "')");
 
                 log.debug(val + " row affected");
             } catch (SQLException s) {
@@ -101,8 +100,10 @@ public class DbCoordinators extends DbAbstract {
                     //coordinator's pwd
                     DtPassword aPwd = new DtPassword(new PtString(res.getString("pwd")));
 
-                    aCtCoordinator.init(aId, aLogin, aPwd);
+                    DtBiometric bio = new DtBiometric(Base64.getDecoder().decode(res.getString("bio")));
 
+                    aCtCoordinator.init(aId, aLogin, aPwd);
+                    aCtCoordinator.bio = bio;
                 }
 
             } catch (SQLException s) {
@@ -174,8 +175,10 @@ public class DbCoordinators extends DbAbstract {
                 String id = aCtCoordinator.id.value.getValue();
                 String login = aCtCoordinator.login.value.getValue();
                 String pwd = aCtCoordinator.pwd.value.getValue();
+                byte[] bio = aCtCoordinator.bio.value;
+                String bioStr = Base64.getEncoder().encodeToString(bio);
                 String statement = "UPDATE " + dbName + ".coordinators" +
-                        " SET pwd='" + pwd + "',  login='" + login + "' " +
+                        " SET pwd='" + pwd + "',  login='" + login + "' , bio='" + bioStr + "' " +
                         "WHERE id='" + id + "'";
                 int val = st.executeUpdate(statement);
                 log.debug(val + " row updated");
@@ -223,9 +226,11 @@ public class DbCoordinators extends DbAbstract {
                             res.getString("id")));
                     DtLogin aLogin = new DtLogin(new PtString(res.getString("login")));
                     DtPassword aPwd = new DtPassword(new PtString(res.getString("pwd")));
+                    DtBiometric bio = new DtBiometric(Base64.getDecoder().decode(res.getString("bio")));
+
                     //init aCtAlert instance
                     aCtCoord.init(aId, aLogin, aPwd);
-
+                    aCtCoord.bio = bio;
                     //add instance to the hash
                     cmpSystemCtCoord
                             .put(aCtCoord.id.value.getValue(), aCtCoord);
