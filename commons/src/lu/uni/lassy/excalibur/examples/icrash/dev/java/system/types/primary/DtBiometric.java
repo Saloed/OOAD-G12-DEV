@@ -3,9 +3,10 @@ package lu.uni.lassy.excalibur.examples.icrash.dev.java.system.types.primary;
 import lu.uni.lassy.excalibur.examples.icrash.dev.java.system.types.design.JIntIs;
 import lu.uni.lassy.excalibur.examples.icrash.dev.java.types.stdlib.PtBoolean;
 
+import java.io.Serializable;
 import java.util.Arrays;
 
-public class DtBiometric implements JIntIs {
+public class DtBiometric implements JIntIs, Serializable {
 
     /**
      * The Constant serialVersionUID.

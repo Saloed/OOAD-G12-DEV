@@ -19,7 +19,7 @@ public class BiometricAuthController {
         // Bio Data Provider initialized for test cases
         byte[] testBioData = new byte[]{0x11, 0xf, 0x1f, 0xa, 0x33};
         this.bioDataProvider = new BIR_Implemented(testBioData, null, true, "Unknown",
-                BIR.ProcessedLevel.RAW, UUID.fromString("test"), BIR.Purpose.IDENTIFY, new Date(0, 0, 0));
+                BIR.ProcessedLevel.RAW, UUID.randomUUID(), BIR.Purpose.IDENTIFY, null);
     }
 
     public DtBiometric getData() {
