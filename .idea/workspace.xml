@@ -5,7 +5,11 @@
     <option name="CUSTOM_SCOPE_NAME" value="Sources" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="02da47f0-f25f-4282-912d-09fd238577db" name="Default" comment="" />
+    <list default="true" id="02da47f0-f25f-4282-912d-09fd238577db" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/commons/libs/BioAPIJava.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="iCrash.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/client/bin/" />
@@ -13,6 +17,131 @@
     <ignored path="$PROJECT_DIR$/database/bin/" />
     <ignored path="$PROJECT_DIR$/server/bin/" />
     <ignored path=".idea/dataSources.local.xml" />
+    <ignored path=".metadata/" />
+    <ignored path=".metadata/.lock" />
+    <ignored path=".metadata/.log" />
+    <ignored path=".metadata/version.ini" />
+    <ignored path=".metadata/.mylyn/.tasks.xml.zip" />
+    <ignored path=".metadata/.mylyn/repositories.xml.zip" />
+    <ignored path=".metadata/.mylyn/tasks.xml.zip" />
+    <ignored path=".metadata/.mylyn/.taskListIndex/segments.gen" />
+    <ignored path=".metadata/.mylyn/.taskListIndex/segments_1" />
+    <ignored path=".metadata/.plugins/lu.uni.lassy.excalibur.doc.messim.predicates.ui/dialog_settings.xml" />
+    <ignored path=".metadata/.plugins/lu.uni.lassy.excalibur.dsl.messir.ui/dialog_settings.xml" />
+    <ignored path=".metadata/.plugins/lu.uni.lassy.excalibur.dsl.messirdoc.ui/dialog_settings.xml" />
+    <ignored path=".metadata/.plugins/org.eclipse.core.runtime/.settings/lu.uni.lassy.excalibur.common.prefs" />
+    <ignored path=".metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.core.resources.prefs" />
+    <ignored path=".metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.debug.ui.prefs" />
+    <ignored path=".metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.egit.core.prefs" />
+    <ignored path=".metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.epp.logging.aeri.ide.prefs" />
+    <ignored path=".metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.jdt.core.prefs" />
+    <ignored path=".metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.jdt.launching.prefs" />
+    <ignored path=".metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.jdt.ui.prefs" />
+    <ignored path=".metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.m2e.discovery.prefs" />
+    <ignored path=".metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.mylyn.context.core.prefs" />
+    <ignored path=".metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.mylyn.monitor.ui.prefs" />
+    <ignored path=".metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.mylyn.tasks.ui.prefs" />
+    <ignored path=".metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.team.ui.prefs" />
+    <ignored path=".metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.editors.prefs" />
+    <ignored path=".metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.ide.prefs" />
+    <ignored path=".metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.prefs" />
+    <ignored path=".metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.workbench.prefs" />
+    <ignored path=".metadata/.plugins/org.eclipse.core.runtime/.settings/se.sics.sicstus.ide.prefs" />
+    <ignored path=".metadata/.plugins/org.eclipse.debug.ui/dialog_settings.xml" />
+    <ignored path=".metadata/.plugins/org.eclipse.debug.ui/launchConfigurationHistory.xml" />
+    <ignored path=".metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi" />
+    <ignored path=".metadata/.plugins/org.eclipse.egit.ui/dialog_settings.xml" />
+    <ignored path=".metadata/.plugins/org.eclipse.epp.logging.aeri.ide/org.eclipse.epp.logging.aeri.ide.server/server-config.json" />
+    <ignored path=".metadata/.plugins/org.eclipse.jdt.core/1004716384.index" />
+    <ignored path=".metadata/.plugins/org.eclipse.jdt.core/1583927216.index" />
+    <ignored path=".metadata/.plugins/org.eclipse.jdt.core/1847969816.index" />
+    <ignored path=".metadata/.plugins/org.eclipse.jdt.core/188619105.index" />
+    <ignored path=".metadata/.plugins/org.eclipse.jdt.core/1904741536.index" />
+    <ignored path=".metadata/.plugins/org.eclipse.jdt.core/2017505986.index" />
+    <ignored path=".metadata/.plugins/org.eclipse.jdt.core/2167310551.index" />
+    <ignored path=".metadata/.plugins/org.eclipse.jdt.core/2312443017.index" />
+    <ignored path=".metadata/.plugins/org.eclipse.jdt.core/2461411560.index" />
+    <ignored path=".metadata/.plugins/org.eclipse.jdt.core/262142283.index" />
+    <ignored path=".metadata/.plugins/org.eclipse.jdt.core/2831536327.index" />
+    <ignored path=".metadata/.plugins/org.eclipse.jdt.core/2844524889.index" />
+    <ignored path=".metadata/.plugins/org.eclipse.jdt.core/2927524569.index" />
+    <ignored path=".metadata/.plugins/org.eclipse.jdt.core/295066496.index" />
+    <ignored path=".metadata/.plugins/org.eclipse.jdt.core/3119455041.index" />
+    <ignored path=".metadata/.plugins/org.eclipse.jdt.core/3172068124.index" />
+    <ignored path=".metadata/.plugins/org.eclipse.jdt.core/3256285438.index" />
+    <ignored path=".metadata/.plugins/org.eclipse.jdt.core/3681335767.index" />
+    <ignored path=".metadata/.plugins/org.eclipse.jdt.core/3726540683.index" />
+    <ignored path=".metadata/.plugins/org.eclipse.jdt.core/375126478.index" />
+    <ignored path=".metadata/.plugins/org.eclipse.jdt.core/3878457715.index" />
+    <ignored path=".metadata/.plugins/org.eclipse.jdt.core/4166838873.index" />
+    <ignored path=".metadata/.plugins/org.eclipse.jdt.core/4248872071.index" />
+    <ignored path=".metadata/.plugins/org.eclipse.jdt.core/486699731.index" />
+    <ignored path=".metadata/.plugins/org.eclipse.jdt.core/assumedExternalFilesCache" />
+    <ignored path=".metadata/.plugins/org.eclipse.jdt.core/externalFilesCache" />
+    <ignored path=".metadata/.plugins/org.eclipse.jdt.core/externalLibsTimeStamps" />
+    <ignored path=".metadata/.plugins/org.eclipse.jdt.core/javaLikeNames.txt" />
+    <ignored path=".metadata/.plugins/org.eclipse.jdt.core/nonChainingJarsCache" />
+    <ignored path=".metadata/.plugins/org.eclipse.jdt.core/savedIndexNames.txt" />
+    <ignored path=".metadata/.plugins/org.eclipse.jdt.core/variablesAndContainers.dat" />
+    <ignored path=".metadata/.plugins/org.eclipse.jdt.launching/.install.xml" />
+    <ignored path=".metadata/.plugins/org.eclipse.jdt.launching/libraryInfos.xml" />
+    <ignored path=".metadata/.plugins/org.eclipse.jdt.ui/dialog_settings.xml" />
+    <ignored path=".metadata/.plugins/org.eclipse.jdt.ui/OpenTypeHistory.xml" />
+    <ignored path=".metadata/.plugins/org.eclipse.jdt.ui/QualifiedTypeNameHistory.xml" />
+    <ignored path=".metadata/.plugins/org.eclipse.ltk.core.refactoring/.refactorings/.workspace/2016/11/47/refactorings.history" />
+    <ignored path=".metadata/.plugins/org.eclipse.ltk.core.refactoring/.refactorings/.workspace/2016/11/47/refactorings.index" />
+    <ignored path=".metadata/.plugins/org.eclipse.ltk.ui.refactoring/dialog_settings.xml" />
+    <ignored path=".metadata/.plugins/org.eclipse.m2e.logback.configuration/0.log" />
+    <ignored path=".metadata/.plugins/org.eclipse.m2e.logback.configuration/logback.1.7.0.20160603-1933.xml" />
+    <ignored path=".metadata/.plugins/org.eclipse.oomph.setup/workspace.setup" />
+    <ignored path=".metadata/.plugins/org.eclipse.pde.core/.cache/clean-cache.properties" />
+    <ignored path=".metadata/.plugins/org.eclipse.ui.editors/dialog_settings.xml" />
+    <ignored path=".metadata/.plugins/org.eclipse.ui.ide/dialog_settings.xml" />
+    <ignored path=".metadata/.plugins/org.eclipse.ui.intro/introstate" />
+    <ignored path=".metadata/.plugins/org.eclipse.ui.workbench/dialog_settings.xml" />
+    <ignored path=".metadata/.plugins/org.eclipse.ui.workbench/workingsets.xml" />
+    <ignored path=".metadata/.plugins/org.eclipse.wst.sse.core/task-tags.properties" />
+    <ignored path=".metadata/.plugins/org.eclipse.xtext.builder/builder.state" />
+    <ignored path=".metadata/.plugins/org.eclipse.core.resources/.root/5.tree" />
+    <ignored path=".metadata/.plugins/org.eclipse.core.resources/.safetable/org.eclipse.core.resources" />
+    <ignored path=".metadata/.plugins/org.eclipse.epp.logging.aeri.ide/org.eclipse.epp.logging.aeri.ide.server/local-history/_0.fdt" />
+    <ignored path=".metadata/.plugins/org.eclipse.epp.logging.aeri.ide/org.eclipse.epp.logging.aeri.ide.server/local-history/_0.fdx" />
+    <ignored path=".metadata/.plugins/org.eclipse.epp.logging.aeri.ide/org.eclipse.epp.logging.aeri.ide.server/local-history/_0.fnm" />
+    <ignored path=".metadata/.plugins/org.eclipse.epp.logging.aeri.ide/org.eclipse.epp.logging.aeri.ide.server/local-history/_0.frq" />
+    <ignored path=".metadata/.plugins/org.eclipse.epp.logging.aeri.ide/org.eclipse.epp.logging.aeri.ide.server/local-history/_0.nrm" />
+    <ignored path=".metadata/.plugins/org.eclipse.epp.logging.aeri.ide/org.eclipse.epp.logging.aeri.ide.server/local-history/_0.tii" />
+    <ignored path=".metadata/.plugins/org.eclipse.epp.logging.aeri.ide/org.eclipse.epp.logging.aeri.ide.server/local-history/_0.tis" />
+    <ignored path=".metadata/.plugins/org.eclipse.epp.logging.aeri.ide/org.eclipse.epp.logging.aeri.ide.server/local-history/segments.gen" />
+    <ignored path=".metadata/.plugins/org.eclipse.epp.logging.aeri.ide/org.eclipse.epp.logging.aeri.ide.server/local-history/segments_1" />
+    <ignored path=".metadata/.plugins/org.eclipse.epp.logging.aeri.ide/org.eclipse.epp.logging.aeri.ide.server/local-history/write.lock" />
+    <ignored path=".metadata/.plugins/org.eclipse.epp.logging.aeri.ide/org.eclipse.epp.logging.aeri.ide.server/remote-history/_1.fdt" />
+    <ignored path=".metadata/.plugins/org.eclipse.epp.logging.aeri.ide/org.eclipse.epp.logging.aeri.ide.server/remote-history/_1.fdx" />
+    <ignored path=".metadata/.plugins/org.eclipse.epp.logging.aeri.ide/org.eclipse.epp.logging.aeri.ide.server/remote-history/_1.fnm" />
+    <ignored path=".metadata/.plugins/org.eclipse.epp.logging.aeri.ide/org.eclipse.epp.logging.aeri.ide.server/remote-history/_1.frq" />
+    <ignored path=".metadata/.plugins/org.eclipse.epp.logging.aeri.ide/org.eclipse.epp.logging.aeri.ide.server/remote-history/_1.nrm" />
+    <ignored path=".metadata/.plugins/org.eclipse.epp.logging.aeri.ide/org.eclipse.epp.logging.aeri.ide.server/remote-history/_1.prx" />
+    <ignored path=".metadata/.plugins/org.eclipse.epp.logging.aeri.ide/org.eclipse.epp.logging.aeri.ide.server/remote-history/_1.tii" />
+    <ignored path=".metadata/.plugins/org.eclipse.epp.logging.aeri.ide/org.eclipse.epp.logging.aeri.ide.server/remote-history/_1.tis" />
+    <ignored path=".metadata/.plugins/org.eclipse.epp.logging.aeri.ide/org.eclipse.epp.logging.aeri.ide.server/remote-history/segments.gen" />
+    <ignored path=".metadata/.plugins/org.eclipse.epp.logging.aeri.ide/org.eclipse.epp.logging.aeri.ide.server/remote-history/segments_2" />
+    <ignored path=".metadata/.plugins/org.eclipse.core.resources/.projects/client/.location" />
+    <ignored path=".metadata/.plugins/org.eclipse.core.resources/.projects/database/.location" />
+    <ignored path=".metadata/.plugins/org.eclipse.core.resources/.projects/server/.location" />
+    <ignored path=".metadata/.plugins/org.eclipse.core.resources/.root/.indexes/history.version" />
+    <ignored path=".metadata/.plugins/org.eclipse.core.resources/.root/.indexes/properties.index" />
+    <ignored path=".metadata/.plugins/org.eclipse.core.resources/.root/.indexes/properties.version" />
+    <ignored path=".metadata/.plugins/org.eclipse.core.resources/.projects/client/.indexes/properties.index" />
+    <ignored path=".metadata/.plugins/org.eclipse.core.resources/.projects/client/org.eclipse.egit.core/GitProjectData.properties" />
+    <ignored path=".metadata/.plugins/org.eclipse.core.resources/.projects/client/org.eclipse.jdt.core/state.dat" />
+    <ignored path=".metadata/.plugins/org.eclipse.core.resources/.projects/commons/.indexes/properties.index" />
+    <ignored path=".metadata/.plugins/org.eclipse.core.resources/.projects/commons/org.eclipse.egit.core/GitProjectData.properties" />
+    <ignored path=".metadata/.plugins/org.eclipse.core.resources/.projects/commons/org.eclipse.jdt.core/state.dat" />
+    <ignored path=".metadata/.plugins/org.eclipse.core.resources/.projects/database/.indexes/properties.index" />
+    <ignored path=".metadata/.plugins/org.eclipse.core.resources/.projects/database/org.eclipse.egit.core/GitProjectData.properties" />
+    <ignored path=".metadata/.plugins/org.eclipse.core.resources/.projects/database/org.eclipse.jdt.core/state.dat" />
+    <ignored path=".metadata/.plugins/org.eclipse.core.resources/.projects/server/.indexes/properties.index" />
+    <ignored path=".metadata/.plugins/org.eclipse.core.resources/.projects/server/org.eclipse.egit.core/GitProjectData.properties" />
+    <ignored path=".metadata/.plugins/org.eclipse.core.resources/.projects/server/org.eclipse.jdt.core/state.dat" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,7 +157,28 @@
     <favorites_list name="iCrash" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="AbstractAuthGUIController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/src/lu/uni/lassy/excalibur/examples/icrash/dev/view/gui/abstractgui/AbstractAuthGUIController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="23" column="33" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ICrashAdminGUIController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/client/src/lu/uni/lassy/excalibur/examples/icrash/dev/view/gui/admin/ICrashAdminGUIController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="356">
+              <caret line="304" column="20" selection-start-line="304" selection-start-column="20" selection-end-line="304" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -46,9 +196,9 @@
         <option value="$PROJECT_DIR$/database/src/lu/uni/lassy/excalibur/examples/icrash/dev/java/utils/MySqlUtils.java" />
         <option value="$PROJECT_DIR$/commons/conf/iCrashState.properties" />
         <option value="$PROJECT_DIR$/client/src/lu/uni/lassy/excalibur/examples/icrash/dev/view/gui/creator/CreatorGUIController.java" />
-        <option value="$PROJECT_DIR$/client/src/lu/uni/lassy/excalibur/examples/icrash/dev/view/gui/admin/ICrashAdminGUIController.java" />
         <option value="$PROJECT_DIR$/client/src/lu/uni/lassy/excalibur/examples/icrash/dev/view/gui/abstractgui/AbstractGUIController.java" />
         <option value="$PROJECT_DIR$/server/src/lu/uni/lassy/excalibur/examples/icrash/dev/java/system/IcrashSystemImpl.java" />
+        <option value="$PROJECT_DIR$/client/src/lu/uni/lassy/excalibur/examples/icrash/dev/view/gui/admin/ICrashAdminGUIController.java" />
       </list>
     </option>
   </component>
@@ -80,7 +230,7 @@
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="PackagesPane" proportions="" version="1">
+    <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -103,12 +253,111 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="iCrash" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="commons" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="iCrash" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="iCrash" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lu.uni.lassy.excalibur.examples.icrash.dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="view.gui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="iCrash" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lu.uni.lassy.excalibur.examples.icrash.dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="view.gui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="abstractgui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="iCrash" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lu.uni.lassy.excalibur.examples.icrash.dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="model" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="iCrash" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lu.uni.lassy.excalibur.examples.icrash.dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="iCrash" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane />
-      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -120,6 +369,11 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\admin\Documents\iCrash\commons\libs" />
+    </key>
   </component>
   <component name="RunManager" selected="Application.RunClient">
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
@@ -602,12 +856,13 @@
       <updated>1478645064114</updated>
       <workItem from="1478645086247" duration="435000" />
       <workItem from="1478683173691" duration="4310000" />
-      <workItem from="1479166957179" duration="82000" />
+      <workItem from="1479166957179" duration="2092000" />
+      <workItem from="1479170281295" duration="60000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4827000" />
+    <option name="totallyTimeSpent" value="6897000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -619,8 +874,8 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32868218" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32868218" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32868218" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -671,6 +926,24 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
     </layout-to-restore>
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
       <collection />
@@ -691,6 +964,22 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/client/src/lu/uni/lassy/excalibur/examples/icrash/dev/view/gui/abstractgui/AbstractAuthGUIController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="23" column="33" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/lu/uni/lassy/excalibur/examples/icrash/dev/view/gui/admin/ICrashAdminGUIController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/server/src/lu/uni/lassy/excalibur/examples/icrash/dev/java/environment/IcrashEnvironmentImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -810,13 +1099,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/lu/uni/lassy/excalibur/examples/icrash/dev/view/gui/admin/ICrashAdminGUIController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="260" column="28" selection-start-line="260" selection-start-column="28" selection-end-line="260" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_73/src.zip!/java/util/ArrayList.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="169">
@@ -842,6 +1124,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="330" column="69" selection-start-line="330" selection-start-column="69" selection-end-line="330" selection-end-column="69" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -856,6 +1139,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -863,6 +1147,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="205">
           <caret line="62" column="13" selection-start-line="62" selection-start-column="13" selection-end-line="62" selection-end-column="13" />
+          <folding>
+            <element signature="e#1931#1932#0" expanded="true" />
+            <element signature="e#1957#1958#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -877,6 +1165,25 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
           <caret line="51" column="12" selection-start-line="51" selection-start-column="12" selection-end-line="51" selection-end-column="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/lu/uni/lassy/excalibur/examples/icrash/dev/view/gui/abstractgui/AbstractAuthGUIController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="23" column="33" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/lu/uni/lassy/excalibur/examples/icrash/dev/view/gui/admin/ICrashAdminGUIController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="356">
+          <caret line="304" column="20" selection-start-line="304" selection-start-column="20" selection-end-line="304" selection-end-column="20" />
+          <folding />
         </state>
       </provider>
     </entry>
