@@ -87,6 +87,13 @@ public class ICrashCoordGUIController extends AbstractAuthGUIController {
     private Button bttnCoordLogon;
 
     /**
+     * The button that allows a user to initiate the face logon function.
+     */
+    @FXML
+    private Button bttnCoordFaceLogon;
+
+
+    /**
      * The main tabpane that holds the normal user controls.
      */
     @FXML
@@ -219,6 +226,17 @@ public class ICrashCoordGUIController extends AbstractAuthGUIController {
     void bttnCoordLogon_OnClick(ActionEvent event) {
         logon();
     }
+
+    /**
+     * Button event that deals with face logging on the user
+     *
+     * @param event The event type fired, we do not need it's details
+     */
+    @FXML
+    void bttnCoordFaceLogon_OnClick(ActionEvent event) {
+        facelogon();
+    }
+
 
     /**
      * Button event that deals with handling of a crisis
@@ -481,6 +499,11 @@ public class ICrashCoordGUIController extends AbstractAuthGUIController {
             }
         } else
             showWarningNoDataEntered();
+    }
+
+    private void facelogon() {
+        // // TODO: make face load
+
     }
 
     /* (non-Javadoc)

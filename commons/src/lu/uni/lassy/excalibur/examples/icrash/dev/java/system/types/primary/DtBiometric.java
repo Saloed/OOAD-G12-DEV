@@ -6,7 +6,7 @@ import org.bioapi.data.BIR;
 
 public class DtBiometric implements JIntIs {
 
-    public BIR.BiometricType value;
+    public byte[] value;
     /**
      * The Constant serialVersionUID.
      */
@@ -20,13 +20,13 @@ public class DtBiometric implements JIntIs {
     /**
      * Instantiates a new datatype biometric.
      *
-     * @param bio  type of BiometricType to create the datatype
+     * @param bio  type of byte array to create the datatype
      */
-    public DtBiometric(BIR.BiometricType bio) {
+    public DtBiometric(byte[] bio) {
     this.value = bio;
     }
     public PtBoolean is() {
-        return new PtBoolean(this.value.containsFacialFeatures());
+        return new PtBoolean(this.value.length <= _maxLength);
     }
 
 }
