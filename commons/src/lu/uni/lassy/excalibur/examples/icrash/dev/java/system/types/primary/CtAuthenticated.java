@@ -36,6 +36,12 @@ public abstract class CtAuthenticated implements Serializable {
      */
     public DtPassword pwd;
 
+
+    /**
+     * The user's biometric.
+     */
+    public DtBiometric bio;
+
     /**
      * A check to see if the current Ct class is considered logged into the system.
      */
@@ -52,6 +58,7 @@ public abstract class CtAuthenticated implements Serializable {
         login = aLogin;
         pwd = aPwd;
         vpIsLogged = new PtBoolean(false);
+        bio = new DtBiometric(new byte[]{});
         return new PtBoolean(true);
     }
 

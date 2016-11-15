@@ -16,6 +16,7 @@ import lu.uni.lassy.excalibur.examples.icrash.dev.controller.exceptions.ServerNo
 import lu.uni.lassy.excalibur.examples.icrash.dev.controller.exceptions.ServerOfflineException;
 import lu.uni.lassy.excalibur.examples.icrash.dev.java.environment.actors.ActProxyAuthenticated;
 import lu.uni.lassy.excalibur.examples.icrash.dev.java.environment.actors.ActProxyAuthenticated.UserType;
+import lu.uni.lassy.excalibur.examples.icrash.dev.java.system.types.primary.DtBiometric;
 import lu.uni.lassy.excalibur.examples.icrash.dev.java.system.types.primary.DtLogin;
 import lu.uni.lassy.excalibur.examples.icrash.dev.java.system.types.primary.DtPassword;
 import lu.uni.lassy.excalibur.examples.icrash.dev.java.types.stdlib.PtBoolean;
@@ -32,10 +33,15 @@ import java.rmi.RemoteException;
 public abstract class AbstractUserController implements HasListeners {
 
     /**
+     * Provide a biometric authentication data
+     **/
+    private final BiometricAuthController bioDataProvider;
+    /**
      * Parameter that has a ProxyActor that allows actors to do functions on the server. These are functions that require users to be
      * logged in to perform, like the addCoordinator. It will be set at moment of initialisation
      **/
     private ActProxyAuthenticated _auth;
+
 
     /**
      * Instantiates a new abstract user controller, this holds the methods that either a coordinator or an administrator should be able to access.
@@ -44,6 +50,7 @@ public abstract class AbstractUserController implements HasListeners {
      */
     protected AbstractUserController(ActProxyAuthenticated auth) {
         this._auth = auth;
+        this.bioDataProvider = new BiometricAuthController();
     }
 
     /**
@@ -60,6 +67,28 @@ public abstract class AbstractUserController implements HasListeners {
         DtPassword aDtPassword = new DtPassword(new PtString(password));
         try {
             return this.getAuth().oeLogin(aDtLogin, aDtPassword);
+        } catch (RemoteException e) {
+            Log4JUtils.getInstance().getLogger().error(e);
+            throw new ServerOfflineException();
+        } catch (NotBoundException e) {
+            Log4JUtils.getInstance().getLogger().error(e);
+            throw new ServerNotBoundException();
+        }
+    }
+
+    /**
+     * The method that allows the user to logon.
+     *
+     * @param login The username to logon with
+     * @return The success of the method
+     * @throws ServerOfflineException  Thrown if the server is currently offline
+     * @throws ServerNotBoundException Thrown if the server hasn't been bound in the RMI settings
+     */
+    public PtBoolean oeBioLogin(String login) throws ServerOfflineException, ServerNotBoundException {
+        DtLogin aDtLogin = new DtLogin(new PtString(login));
+        DtBiometric bio = this.bioDataProvider.getData();
+        try {
+            return this.getAuth().oeBioLogin(aDtLogin, bio);
         } catch (RemoteException e) {
             Log4JUtils.getInstance().getLogger().error(e);
             throw new ServerOfflineException();

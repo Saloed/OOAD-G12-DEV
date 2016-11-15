@@ -34,6 +34,7 @@ import java.util.Hashtable;
  */
 public class CoordinatorController extends AbstractUserController {
 
+
     /**
      * Instantiates a new coordinator controller.
      *

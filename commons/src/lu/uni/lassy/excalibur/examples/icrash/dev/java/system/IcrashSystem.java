@@ -313,6 +313,17 @@ public interface IcrashSystem extends Remote {
     public PtBoolean oeLogin(DtLogin aDtLogin, DtPassword aDtPassword) throws RemoteException;
 
     /**
+     * Processes a login for the username and biometric data specified.
+     *
+     * @param aDtLogin    The username to login with
+     * @param aDtBiometric The biometric data to login with
+     * @return The success of the method
+     * @throws RemoteException Thrown if the server is offline
+     */
+    public PtBoolean oeBioLogin(DtLogin aDtLogin, DtBiometric aDtBiometric) throws RemoteException;
+
+
+    /**
      * Processes a logout for the current authenticating actor.
      *
      * @return The success of the method

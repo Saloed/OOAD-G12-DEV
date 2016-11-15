@@ -15,6 +15,7 @@ package lu.uni.lassy.excalibur.examples.icrash.dev.java.environment.actors;
 
 import lu.uni.lassy.excalibur.examples.icrash.dev.java.system.types.design.JIntHasServerSideActor;
 import lu.uni.lassy.excalibur.examples.icrash.dev.java.system.types.design.JIntIsActor;
+import lu.uni.lassy.excalibur.examples.icrash.dev.java.system.types.primary.DtBiometric;
 import lu.uni.lassy.excalibur.examples.icrash.dev.java.system.types.primary.DtLogin;
 import lu.uni.lassy.excalibur.examples.icrash.dev.java.system.types.primary.DtPassword;
 import lu.uni.lassy.excalibur.examples.icrash.dev.java.types.stdlib.PtBoolean;
@@ -48,6 +49,18 @@ public interface ActProxyAuthenticated extends Remote, JIntHasServerSideActor, J
      * @throws NotBoundException Thrown if the server has not been bound correctly in RMI settings
      */
     public PtBoolean oeLogin(DtLogin aDtLogin, DtPassword aDtPassword)
+            throws RemoteException, NotBoundException;
+
+    /**
+     * Performs the oeLogin function with the username and password provided.
+     *
+     * @param aDtLogin    The username to logon with
+     * @param aDtBiometric The bio data to logon with
+     * @return The success of the operation
+     * @throws RemoteException   Thrown if the server is offline
+     * @throws NotBoundException Thrown if the server has not been bound correctly in RMI settings
+     */
+    public PtBoolean oeBioLogin(DtLogin aDtLogin, DtBiometric aDtBiometric)
             throws RemoteException, NotBoundException;
 
     /**

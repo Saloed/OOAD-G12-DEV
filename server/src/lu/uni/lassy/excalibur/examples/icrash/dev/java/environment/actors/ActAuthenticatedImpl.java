@@ -14,6 +14,7 @@
 package lu.uni.lassy.excalibur.examples.icrash.dev.java.environment.actors;
 
 import lu.uni.lassy.excalibur.examples.icrash.dev.java.system.IcrashSystem;
+import lu.uni.lassy.excalibur.examples.icrash.dev.java.system.types.primary.DtBiometric;
 import lu.uni.lassy.excalibur.examples.icrash.dev.java.system.types.primary.DtLogin;
 import lu.uni.lassy.excalibur.examples.icrash.dev.java.system.types.primary.DtPassword;
 import lu.uni.lassy.excalibur.examples.icrash.dev.java.types.stdlib.PtBoolean;
@@ -96,7 +97,31 @@ public abstract class ActAuthenticatedImpl extends UnicastRemoteObject
 
         return res;
     }
+    /* (non-Javadoc)
+        * @see lu.uni.lassy.excalibur.examples.icrash.dev.java.environment.actors.ActAuthenticated#oeLogin(lu.uni.lassy.excalibur.examples.icrash.dev.java.system.types.primary.DtLogin, lu.uni.lassy.excalibur.examples.icrash.dev.java.system.types.primary.DtPassword)
+        */
+    synchronized public PtBoolean oeBioLogin(DtLogin aDtLogin,
+                                             DtBiometric aDtBiometric) throws RemoteException, NotBoundException {
 
+        Logger log = Log4JUtils.getInstance().getLogger();
+
+        Registry registry = LocateRegistry.getRegistry(RmiUtils.getInstance().getHost(), RmiUtils.getInstance().getPort());
+
+        //Gathering the remote object as it was published into the registry
+        IcrashSystem iCrashSys_Server = (IcrashSystem) registry
+                .lookup("iCrashServer");
+
+        //set up ActAuthenticated instance that performs the request
+        iCrashSys_Server.setCurrentRequestingAuthenticatedActor(this);
+
+        log.info("message ActAuthenticated.oeLogin sent to system");
+        PtBoolean res = iCrashSys_Server.oeBioLogin(aDtLogin, aDtBiometric);
+
+        if (res.getValue() == true)
+            log.info("operation oeLogin successfully executed by the system");
+
+        return res;
+    }
     /* (non-Javadoc)
      * @see lu.uni.lassy.excalibur.examples.icrash.dev.java.environment.actors.ActAuthenticated#oeLogout()
      */

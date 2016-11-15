@@ -58,7 +58,7 @@ import java.util.ResourceBundle;
  */
 public class ICrashCoordGUIController extends AbstractAuthGUIController {
     /*
-	* This section of controls and methods is to be replaced by modifications in the ICrash.fxml document from the sample skeleton controller
+    * This section of controls and methods is to be replaced by modifications in the ICrash.fxml document from the sample skeleton controller
 	* When replacing, remember to reassign the correct methods to the button event methods and set the correct types for the tableviews
 	*/
 
@@ -234,7 +234,7 @@ public class ICrashCoordGUIController extends AbstractAuthGUIController {
      */
     @FXML
     void bttnCoordFaceLogon_OnClick(ActionEvent event) {
-        facelogon();
+        faceLogon();
     }
 
 
@@ -501,9 +501,19 @@ public class ICrashCoordGUIController extends AbstractAuthGUIController {
             showWarningNoDataEntered();
     }
 
-    private void facelogon() {
-        // // TODO: make face load
-
+    private void faceLogon() {
+        if (txtfldCoordLogonUserName.getText().length() > 0) {
+            try {
+                if (userController.oeBioLogin(txtfldCoordLogonUserName.getText()).getValue()) {
+                    if (userController.getUserType() == UserType.Coordinator) {
+                        logonShowPanes(true);
+                    }
+                }
+            } catch (ServerOfflineException | ServerNotBoundException e) {
+                showExceptionErrorMessage(e);
+            }
+        } else
+            showWarningNoDataEntered();
     }
 
     /* (non-Javadoc)

@@ -15,6 +15,7 @@ package lu.uni.lassy.excalibur.examples.icrash.dev.model.actors;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import lu.uni.lassy.excalibur.examples.icrash.dev.java.environment.actors.*;
+import lu.uni.lassy.excalibur.examples.icrash.dev.java.system.types.primary.DtBiometric;
 import lu.uni.lassy.excalibur.examples.icrash.dev.java.system.types.primary.DtLogin;
 import lu.uni.lassy.excalibur.examples.icrash.dev.java.system.types.primary.DtPassword;
 import lu.uni.lassy.excalibur.examples.icrash.dev.java.types.stdlib.PtBoolean;
@@ -85,6 +86,13 @@ public abstract class ActProxyAuthenticatedImpl extends UnicastRemoteObject impl
      */
     public PtBoolean oeLogin(DtLogin aDtLogin, DtPassword aDtPassword) throws RemoteException, NotBoundException {
         return this._serverSideActor.oeLogin(aDtLogin, aDtPassword);
+    }
+
+    /* (non-Javadoc)
+   * @see lu.uni.lassy.excalibur.examples.icrash.dev.java.environment.actors.ActProxyAuthenticated#oeLogin(lu.uni.lassy.excalibur.examples.icrash.dev.java.system.types.primary.DtLogin, lu.uni.lassy.excalibur.examples.icrash.dev.java.system.types.primary.DtPassword)
+   */
+    public PtBoolean oeBioLogin(DtLogin aDtLogin, DtBiometric aDtBiometric) throws RemoteException, NotBoundException {
+        return this._serverSideActor.oeBioLogin(aDtLogin, aDtBiometric);
     }
 
     /* (non-Javadoc)
