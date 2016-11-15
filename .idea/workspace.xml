@@ -169,12 +169,12 @@
       <file leaf-file-name="ICrashAdminGUIController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/client/src/lu/uni/lassy/excalibur/examples/icrash/dev/view/gui/admin/ICrashAdminGUIController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="384">
-              <caret line="195" column="47" selection-start-line="195" selection-start-column="47" selection-end-line="195" selection-end-column="47" />
+            <state relative-caret-position="260">
+              <caret line="270" column="16" selection-start-line="270" selection-start-column="16" selection-end-line="270" selection-end-column="16" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#5634#5635#0" expanded="true" />
-                <element signature="e#5687#5688#0" expanded="true" />
+                <element signature="e#5766#5767#0" expanded="true" />
+                <element signature="e#5819#5820#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -870,7 +870,7 @@
       <workItem from="1478683173691" duration="4310000" />
       <workItem from="1479166957179" duration="2092000" />
       <workItem from="1479170281295" duration="8899000" />
-      <workItem from="1479181068907" duration="9119000" />
+      <workItem from="1479181068907" duration="9829000" />
     </task>
     <task id="LOCAL-00001" summary="added BioAPI lib">
       <created>1479170367338</created>
@@ -935,11 +935,18 @@
       <option name="project" value="LOCAL" />
       <updated>1479189520557</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="admin gui refactored">
+      <created>1479190957850</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1479190957850</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24855000" />
+    <option name="totallyTimeSpent" value="25565000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -1045,7 +1052,8 @@
     <MESSAGE value="change admin name to admin/admin" />
     <MESSAGE value="added database support for biometric authentication" />
     <MESSAGE value="added modal window for add/delete coordinator" />
-    <option name="LAST_COMMIT_MESSAGE" value="added modal window for add/delete coordinator" />
+    <MESSAGE value="admin gui refactored" />
+    <option name="LAST_COMMIT_MESSAGE" value="admin gui refactored" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1480,12 +1488,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client/src/lu/uni/lassy/excalibur/examples/icrash/dev/view/gui/admin/ICrashAdminGUIController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="195" column="47" selection-start-line="195" selection-start-column="47" selection-end-line="195" selection-end-column="47" />
+        <state relative-caret-position="260">
+          <caret line="270" column="16" selection-start-line="270" selection-start-column="16" selection-end-line="270" selection-end-column="16" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#5634#5635#0" expanded="true" />
-            <element signature="e#5687#5688#0" expanded="true" />
+            <element signature="e#5766#5767#0" expanded="true" />
+            <element signature="e#5819#5820#0" expanded="true" />
           </folding>
         </state>
       </provider>

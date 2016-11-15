@@ -110,6 +110,12 @@ public class ICrashAdminGUIController extends AbstractAuthGUIController {
     private Button bttnBottomAdminCoordinatorDeleteACoordinator;
 
     /**
+     * The tableview of the coordinators timing statistic
+     */
+    @FXML
+    private TableView<String> tableCoordStats;
+
+    /**
      * The tableview of the recieved messages from the system
      */
     @FXML
@@ -246,6 +252,7 @@ public class ICrashAdminGUIController extends AbstractAuthGUIController {
             confirm.setOnAction(event1 -> {
                 if (!checkIfAllDialogHasBeenFilledIn(pane)) {
                     showWarningNoDataEntered();
+                    dialog.close();
                     return;
                 }
                 try {
@@ -269,6 +276,7 @@ public class ICrashAdminGUIController extends AbstractAuthGUIController {
             confirm.setOnAction(event1 -> {
                 if (!checkIfAllDialogHasBeenFilledIn(pane)) {
                     showWarningNoDataEntered();
+                    dialog.close();
                     return;
                 }
                 try {
