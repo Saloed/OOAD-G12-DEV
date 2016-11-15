@@ -21,6 +21,7 @@ import lu.uni.lassy.excalibur.examples.icrash.dev.java.types.stdlib.*;
 import lu.uni.lassy.excalibur.examples.icrash.dev.java.utils.*;
 import org.apache.log4j.Logger;
 
+import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
@@ -228,7 +229,7 @@ public class IcrashSystemImpl extends UnicastRemoteObject implements
     }
 
 	/*
-	 * ********************************
+     * ********************************
 	 * New implementation operations 
 	 * *********************************.
 	 */
@@ -437,9 +438,9 @@ public class IcrashSystemImpl extends UnicastRemoteObject implements
     public ActComCompany getActComCompany(String name) throws java.rmi.RemoteException {
         return cmpSystemActComCompany.get(name);
     }
-	
+
 	/*
-	 * ************************
+     * ************************
 	 * System operations 
 	 * ************************.
 	 */
@@ -453,7 +454,7 @@ public class IcrashSystemImpl extends UnicastRemoteObject implements
             log.debug("in IcrashSystemimpl.oeCreateSystemAndEnvironment...");
 
 			/*
-			 * 	PostF 1:
+             * 	PostF 1:
 			 * 
 			 *  the ctState instance is initialised with
 			 *  the integer 1 for the crisis and alert counters used for their	identifications,
@@ -491,7 +492,7 @@ public class IcrashSystemImpl extends UnicastRemoteObject implements
             ctState.init(aNextValueForAlertID, aNextValueForCrisisID, aClock,
                     aCrisisReminderPeriod, aMaxCrisisReminderPeriod, aClock,
                     aVpStarted);
-			/* ENV
+            /* ENV
 			PostF 2 the actMsrCreator actor instance is initiated (remember that since the
 			oeCreateSystemAndEnvironment is a special event, its role is to make consistent the post
 			state, thus creating the actor and its interfaces is required even though the sending 
@@ -888,6 +889,10 @@ public class IcrashSystemImpl extends UnicastRemoteObject implements
                         }
                     }
                 }
+
+                sendStatisticForAdmins(new DtCoordStatistic(new DtCoordinatorID(theActCoordinator.getLogin().value),
+                        new PtString("HANDLE"),  ctState.clock.time.minute));
+
                 return new PtBoolean(true);
             }
         } catch (Exception e) {
@@ -1027,6 +1032,10 @@ public class IcrashSystemImpl extends UnicastRemoteObject implements
                 } catch (RemoteException e) {
                     Log4JUtils.getInstance().getLogger().error(e);
                 }
+
+                sendStatisticForAdmins(new DtCoordStatistic(new DtCoordinatorID(theActCoordinator.getLogin().value),
+                        new PtString("FREE"),  ctState.clock.time.minute));
+
                 return new PtBoolean(true);
             }
         } catch (Exception e) {
@@ -1072,6 +1081,8 @@ public class IcrashSystemImpl extends UnicastRemoteObject implements
                         //PostF1
                         PtString aMessage = new PtString("You are logged ! Welcome ...");
                         currentRequestingAuthenticatedActor.ieMessage(aMessage);
+                        sendStatisticForAdmins(new DtCoordStatistic(new DtCoordinatorID(authActorCheck.getLogin().value),
+                                new PtString("FREE"), ctState.clock.time.minute));
                         return new PtBoolean(true);
                     }
                 }
@@ -1131,6 +1142,8 @@ public class IcrashSystemImpl extends UnicastRemoteObject implements
                         //PostF1
                         PtString aMessage = new PtString("You are logged ! Welcome ...");
                         currentRequestingAuthenticatedActor.ieMessage(aMessage);
+                        sendStatisticForAdmins(new DtCoordStatistic(new DtCoordinatorID(authActorCheck.getLogin().value),
+                                new PtString("FREE"), ctState.clock.time.minute));
                         return new PtBoolean(true);
                     }
                 }
@@ -1152,6 +1165,19 @@ public class IcrashSystemImpl extends UnicastRemoteObject implements
             log.error("Exception in biometric oeLogin..." + ex);
         }
         return new PtBoolean(false);
+    }
+
+    private void sendStatisticForAdmins(DtCoordStatistic statistic) {
+        try {
+            Registry registry = LocateRegistry.getRegistry(RmiUtils.getInstance().getHost(), RmiUtils.getInstance().getPort());
+            IcrashEnvironment env = (IcrashEnvironment) registry.lookup("iCrashEnvironment");
+            for (String adminKey : env.getAdministrators().keySet()) {
+                ActAdministrator admin = env.getActAdministrator(adminKey);
+                admin.oeUpdateTimingStatistic(statistic);
+            }
+        } catch (RemoteException | NotBoundException ex) {
+            log.error("Error during statistic update" + ex);
+        }
     }
 
     /* (non-Javadoc)

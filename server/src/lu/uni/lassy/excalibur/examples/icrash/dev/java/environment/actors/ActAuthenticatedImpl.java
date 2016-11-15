@@ -15,6 +15,7 @@ package lu.uni.lassy.excalibur.examples.icrash.dev.java.environment.actors;
 
 import lu.uni.lassy.excalibur.examples.icrash.dev.java.system.IcrashSystem;
 import lu.uni.lassy.excalibur.examples.icrash.dev.java.system.types.primary.DtBiometric;
+import lu.uni.lassy.excalibur.examples.icrash.dev.java.system.types.primary.DtCoordStatistic;
 import lu.uni.lassy.excalibur.examples.icrash.dev.java.system.types.primary.DtLogin;
 import lu.uni.lassy.excalibur.examples.icrash.dev.java.system.types.primary.DtPassword;
 import lu.uni.lassy.excalibur.examples.icrash.dev.java.types.stdlib.PtBoolean;
@@ -97,6 +98,7 @@ public abstract class ActAuthenticatedImpl extends UnicastRemoteObject
 
         return res;
     }
+
     /* (non-Javadoc)
         * @see lu.uni.lassy.excalibur.examples.icrash.dev.java.environment.actors.ActAuthenticated#oeLogin(lu.uni.lassy.excalibur.examples.icrash.dev.java.system.types.primary.DtLogin, lu.uni.lassy.excalibur.examples.icrash.dev.java.system.types.primary.DtPassword)
         */
@@ -122,6 +124,7 @@ public abstract class ActAuthenticatedImpl extends UnicastRemoteObject
 
         return res;
     }
+
     /* (non-Javadoc)
      * @see lu.uni.lassy.excalibur.examples.icrash.dev.java.environment.actors.ActAuthenticated#oeLogout()
      */
@@ -147,10 +150,11 @@ public abstract class ActAuthenticatedImpl extends UnicastRemoteObject
 
         return res;
     }
+
     /* (non-Javadoc)
      * @see lu.uni.lassy.excalibur.examples.icrash.dev.java.environment.actors.ActAuthenticated#oeUpdateBio()
      */
-    public PtBoolean oeUpdateBio(DtBiometric bio) throws RemoteException, NotBoundException{
+    public PtBoolean oeUpdateBio(DtBiometric bio) throws RemoteException, NotBoundException {
         Logger log = Log4JUtils.getInstance().getLogger();
 
         Registry registry = LocateRegistry.getRegistry(RmiUtils.getInstance().getHost(), RmiUtils.getInstance().getPort());
@@ -188,6 +192,25 @@ public abstract class ActAuthenticatedImpl extends UnicastRemoteObject
             throws RemoteException, NotBoundException {
         listeners.remove(aActProxyAuthenticated);
     }
+
+    /* (non-Javadoc)
+         * @see lu.uni.lassy.excalibur.examples.icrash.dev.java.environment.actors.ActAuthenticated#oeUpdateTimingStatistic
+         */
+    public PtBoolean oeUpdateTimingStatistic(DtCoordStatistic coordStatistic) throws RemoteException {
+        Logger log = Log4JUtils.getInstance().getLogger();
+        log.info("Statistic oeUpdateTimingStatistic received from system");
+        for (Iterator<ActProxyAuthenticated> iterator = listeners.iterator(); iterator.hasNext(); ) {
+            ActProxyAuthenticated aProxy = iterator.next();
+            try {
+                aProxy.oeUpdateTimingStatistic(coordStatistic);
+            } catch (RemoteException e) {
+                log.error(e);
+                iterator.remove();
+            }
+        }
+        return new PtBoolean(true);
+    }
+
 
     /* (non-Javadoc)
      * @see lu.uni.lassy.excalibur.examples.icrash.dev.java.environment.actors.ActAuthenticated#ieMessage(lu.uni.lassy.excalibur.examples.icrash.dev.java.types.stdlib.PtString)

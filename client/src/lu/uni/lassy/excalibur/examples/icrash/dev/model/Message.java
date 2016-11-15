@@ -116,8 +116,10 @@ public class Message {
          * The ie coordinator updated.
          */
         ieCoordinatorUpdated,
-
         /**
+         * The ie timing statistic updated.
+         */
+        ieTimingStatisticUpdated, /**
          * The ie sms send.
          */
         ieSmsSend

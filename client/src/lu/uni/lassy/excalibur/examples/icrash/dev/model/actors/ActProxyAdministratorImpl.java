@@ -77,6 +77,17 @@ public class ActProxyAdministratorImpl extends ActProxyAuthenticatedImpl impleme
         return new PtBoolean(true);
     }
 
+
+    /* (non-Javadoc)
+     * @see lu.uni.lassy.excalibur.examples.icrash.dev.java.environment.actors.ActProxyAdministrator#ieTimingStatisticUpdated()
+     */
+    public PtBoolean ieTimingStatisticUpdated() {
+        Logger log = Log4JUtils.getInstance().getLogger();
+        log.info("message ActAdministrator.ieTimingStatisticUpdated received from system");
+        listOfMessages.add(new Message(MessageType.ieTimingStatisticUpdated));
+        return new PtBoolean(true);
+    }
+
     /* (non-Javadoc)
      * @see lu.uni.lassy.excalibur.examples.icrash.dev.java.environment.actors.ActProxyAdministrator#ieCoordinatorDeleted()
      */

@@ -49,6 +49,14 @@ public interface ActProxyAdministrator extends ActProxyAuthenticated {
     public PtBoolean oeDeleteCoordinator(DtCoordinatorID aDtCoordinatorID) throws RemoteException, NotBoundException;
 
     /**
+     * A message received from the server side actor saying the statistic was updated .
+     *
+     * @return The success of the method
+     * @throws RemoteException Thrown if the server is offline
+     */
+    public PtBoolean ieTimingStatisticUpdated() throws RemoteException;
+
+    /**
      * A message received from the server side actor saying the coordinator was created .
      *
      * @return The success of the method

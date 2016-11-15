@@ -14,8 +14,10 @@ package lu.uni.lassy.excalibur.examples.icrash.dev.model.actors;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.collections.ObservableMap;
 import lu.uni.lassy.excalibur.examples.icrash.dev.java.environment.actors.*;
 import lu.uni.lassy.excalibur.examples.icrash.dev.java.system.types.primary.DtBiometric;
+import lu.uni.lassy.excalibur.examples.icrash.dev.java.system.types.primary.DtCoordStatistic;
 import lu.uni.lassy.excalibur.examples.icrash.dev.java.system.types.primary.DtLogin;
 import lu.uni.lassy.excalibur.examples.icrash.dev.java.system.types.primary.DtPassword;
 import lu.uni.lassy.excalibur.examples.icrash.dev.java.types.stdlib.PtBoolean;
@@ -48,6 +50,11 @@ public abstract class ActProxyAuthenticatedImpl extends UnicastRemoteObject impl
      * This is an observable list of messages, which when a listener is bound to, will inform the listerner something has happened and it should update This allows real life time updates on the client GUI.
      */
     public ObservableList<Message> listOfMessages = FXCollections.observableArrayList(_listOfMessages);
+
+    /**
+     * Observable map for coordinators timing statistic
+     */
+    public ObservableMap<String, DtCoordStatistic> mapCoordStatistic = FXCollections.observableHashMap();
     /**
      * The server side actor to use when calling user specific methods.
      */
@@ -94,10 +101,11 @@ public abstract class ActProxyAuthenticatedImpl extends UnicastRemoteObject impl
     public PtBoolean oeBioLogin(DtLogin aDtLogin, DtBiometric aDtBiometric) throws RemoteException, NotBoundException {
         return this._serverSideActor.oeBioLogin(aDtLogin, aDtBiometric);
     }
+
     /* (non-Javadoc)
      * @see lu.uni.lassy.excalibur.examples.icrash.dev.java.environment.actors.ActProxyAuthenticated#oeUpdateBio
      */
-    public PtBoolean oeUpdateBio(DtBiometric bio) throws RemoteException, NotBoundException{
+    public PtBoolean oeUpdateBio(DtBiometric bio) throws RemoteException, NotBoundException {
         return this._serverSideActor.oeUpdateBio(bio);
     }
 
@@ -119,6 +127,23 @@ public abstract class ActProxyAuthenticatedImpl extends UnicastRemoteObject impl
         listOfMessages.add(new Message(MessageType.ieMessage, aMessage.getValue()));
         return new PtBoolean(true);
     }
+
+    /* (non-Javadoc)
+         * @see lu.uni.lassy.excalibur.examples.icrash.dev.java.environment.actors.ActProxyAuthenticated#oeUpdateTimingStatistic
+         */
+    public PtBoolean oeUpdateTimingStatistic(DtCoordStatistic coordStatistic)
+            throws RemoteException {
+        if (!mapCoordStatistic.containsKey(coordStatistic.coordId.value.getValue())) {
+            mapCoordStatistic.put(coordStatistic.coordId.value.getValue(), coordStatistic);
+
+        } else {
+            mapCoordStatistic.replace(coordStatistic.coordId.value.getValue(), coordStatistic);
+        }
+        Logger log = Log4JUtils.getInstance().getLogger();
+        log.info("Statistic updated for coordinator : " + coordStatistic.coordId.value.getValue());
+        return new PtBoolean(true);
+    }
+
 
     /**
      * Gets the server side actor.

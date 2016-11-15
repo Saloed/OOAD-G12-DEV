@@ -58,7 +58,7 @@ public abstract class AbstractGUIController implements Initializable {
     /**
      * Sets the window details, which allows dialogs to appear in the correct place when created
      *
-     * @param The window that this form belongs to
+     * @param window that this form belongs to
      */
     public void setWindow(Window window) {
         this.window = window;
@@ -580,6 +580,17 @@ public abstract class AbstractGUIController implements Initializable {
         //Using the method Platform.runLater(), we can call methods to be ran at a later date, but on the main thread. This allows us to interact
         //with GUI elements that are on the main thread
         Platform.runLater(() -> tblvw.scrollTo(observableList.size() - 1));
+    }
+
+    /**
+     * Adds the provided list of coordinator statistic  to the tableview.
+     *
+     * @param table The tableview to add the data to
+     * @param list  the list of items to add to the tableview
+     */
+    public void addStatsToTableView(TableView<DtCoordStatistic> table, Collection<? extends DtCoordStatistic> list) {
+        table.getItems().clear();
+        table.getItems().addAll(list);
     }
 
     /**

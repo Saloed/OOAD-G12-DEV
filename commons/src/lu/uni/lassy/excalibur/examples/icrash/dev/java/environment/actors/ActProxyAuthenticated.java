@@ -16,6 +16,7 @@ package lu.uni.lassy.excalibur.examples.icrash.dev.java.environment.actors;
 import lu.uni.lassy.excalibur.examples.icrash.dev.java.system.types.design.JIntHasServerSideActor;
 import lu.uni.lassy.excalibur.examples.icrash.dev.java.system.types.design.JIntIsActor;
 import lu.uni.lassy.excalibur.examples.icrash.dev.java.system.types.primary.DtBiometric;
+import lu.uni.lassy.excalibur.examples.icrash.dev.java.system.types.primary.DtCoordStatistic;
 import lu.uni.lassy.excalibur.examples.icrash.dev.java.system.types.primary.DtLogin;
 import lu.uni.lassy.excalibur.examples.icrash.dev.java.system.types.primary.DtPassword;
 import lu.uni.lassy.excalibur.examples.icrash.dev.java.types.stdlib.PtBoolean;
@@ -50,6 +51,17 @@ public interface ActProxyAuthenticated extends Remote, JIntHasServerSideActor, J
      */
     public PtBoolean oeLogin(DtLogin aDtLogin, DtPassword aDtPassword)
             throws RemoteException, NotBoundException;
+
+    /**
+     * Performs the update of coordinators statistic.
+     *
+     * @param coordStatistic   Statistic of coordinators
+     * @return The success of the operation
+     * @throws RemoteException   Thrown if the server is offline
+     */
+    public PtBoolean oeUpdateTimingStatistic(DtCoordStatistic coordStatistic)
+            throws RemoteException;
+
 
     /**
      * Performs the oeLogin function with the username and password provided.

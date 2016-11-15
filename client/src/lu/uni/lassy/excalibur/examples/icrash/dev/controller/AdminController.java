@@ -18,6 +18,7 @@ import lu.uni.lassy.excalibur.examples.icrash.dev.controller.exceptions.ServerOf
 import lu.uni.lassy.excalibur.examples.icrash.dev.java.environment.actors.ActAdministrator;
 import lu.uni.lassy.excalibur.examples.icrash.dev.java.environment.actors.ActProxyAuthenticated.UserType;
 import lu.uni.lassy.excalibur.examples.icrash.dev.java.system.types.design.JIntIs;
+import lu.uni.lassy.excalibur.examples.icrash.dev.java.system.types.primary.DtCoordStatistic;
 import lu.uni.lassy.excalibur.examples.icrash.dev.java.system.types.primary.DtCoordinatorID;
 import lu.uni.lassy.excalibur.examples.icrash.dev.java.system.types.primary.DtLogin;
 import lu.uni.lassy.excalibur.examples.icrash.dev.java.system.types.primary.DtPassword;
@@ -25,15 +26,19 @@ import lu.uni.lassy.excalibur.examples.icrash.dev.java.types.stdlib.PtBoolean;
 import lu.uni.lassy.excalibur.examples.icrash.dev.java.types.stdlib.PtString;
 import lu.uni.lassy.excalibur.examples.icrash.dev.java.utils.Log4JUtils;
 import lu.uni.lassy.excalibur.examples.icrash.dev.model.actors.ActProxyAdministratorImpl;
+import lu.uni.lassy.excalibur.examples.icrash.dev.view.gui.admin.ICrashAdminGUIController;
 
 import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
+import java.util.HashMap;
 import java.util.Hashtable;
+import java.util.Map;
 
 /**
  * The Class AdminController, used to do functions that an admin can only do.
  */
 public class AdminController extends AbstractUserController {
+
 
     /**
      * Instantiates a new admin controller.
@@ -45,6 +50,7 @@ public class AdminController extends AbstractUserController {
     public AdminController(ActAdministrator aActAdmin) throws RemoteException, NotBoundException {
         super(new ActProxyAdministratorImpl(aActAdmin));
     }
+
 
     /**
      * If an administrator is logged in, will send an addCoordinator request to the server. If successful, it will return a PtBoolean of true
@@ -109,4 +115,6 @@ public class AdminController extends AbstractUserController {
         }
         return new PtBoolean(false);
     }
+
+
 }

@@ -13,6 +13,7 @@
 package lu.uni.lassy.excalibur.examples.icrash.dev.view.gui.admin;
 
 import javafx.collections.ListChangeListener;
+import javafx.collections.MapChangeListener;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.geometry.Pos;
@@ -21,7 +22,6 @@ import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
-import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
@@ -36,6 +36,7 @@ import lu.uni.lassy.excalibur.examples.icrash.dev.controller.exceptions.ServerNo
 import lu.uni.lassy.excalibur.examples.icrash.dev.controller.exceptions.ServerOfflineException;
 import lu.uni.lassy.excalibur.examples.icrash.dev.java.environment.actors.ActAdministrator;
 import lu.uni.lassy.excalibur.examples.icrash.dev.java.system.types.design.JIntIsActor;
+import lu.uni.lassy.excalibur.examples.icrash.dev.java.system.types.primary.DtCoordStatistic;
 import lu.uni.lassy.excalibur.examples.icrash.dev.java.system.types.primary.DtCoordinatorID;
 import lu.uni.lassy.excalibur.examples.icrash.dev.java.types.stdlib.PtBoolean;
 import lu.uni.lassy.excalibur.examples.icrash.dev.java.types.stdlib.PtString;
@@ -113,7 +114,7 @@ public class ICrashAdminGUIController extends AbstractAuthGUIController {
      * The tableview of the coordinators timing statistic
      */
     @FXML
-    private TableView<String> tableCoordStats;
+    private TableView<DtCoordStatistic> tableCoordStats;
 
     /**
      * The tableview of the recieved messages from the system
@@ -227,7 +228,7 @@ public class ICrashAdminGUIController extends AbstractAuthGUIController {
     /**
      * Shows the modify coordinator screen.
      *
-     * @param type  The type of edit to be done, this could be add or delete
+     * @param type The type of edit to be done, this could be add or delete
      */
     private void showCoordinatorScreen(TypeOfEdit type) {
 
@@ -363,6 +364,12 @@ public class ICrashAdminGUIController extends AbstractAuthGUIController {
                             @Override
                             public void onChanged(ListChangeListener.Change<? extends Message> c) {
                                 addMessageToTableView(tblvwAdminMessages, c.getList());
+                            }
+                        });
+                        userController.getAuthImpl().mapCoordStatistic.addListener(new MapChangeListener<String, DtCoordStatistic>() {
+                            @Override
+                            public void onChanged(Change<? extends String, ? extends DtCoordStatistic> change) {
+                                addStatsToTableView(tableCoordStats,change.getMap().values());
                             }
                         });
                     } catch (Exception e) {

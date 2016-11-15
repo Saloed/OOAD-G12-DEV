@@ -14,6 +14,7 @@ package lu.uni.lassy.excalibur.examples.icrash.dev.java.environment.actors;
 
 import lu.uni.lassy.excalibur.examples.icrash.dev.java.system.types.design.JIntIsActor;
 import lu.uni.lassy.excalibur.examples.icrash.dev.java.system.types.primary.DtBiometric;
+import lu.uni.lassy.excalibur.examples.icrash.dev.java.system.types.primary.DtCoordStatistic;
 import lu.uni.lassy.excalibur.examples.icrash.dev.java.system.types.primary.DtLogin;
 import lu.uni.lassy.excalibur.examples.icrash.dev.java.system.types.primary.DtPassword;
 import lu.uni.lassy.excalibur.examples.icrash.dev.java.types.stdlib.PtBoolean;
@@ -93,6 +94,15 @@ public interface ActAuthenticated extends java.rmi.Remote, Serializable, JIntIsA
      * @throws RemoteException Thrown if the server isn't online
      */
     public PtBoolean ieMessage(PtString aMessage) throws RemoteException;
+
+    /**
+     * Updates timing statistic for coordinator
+     *
+     * @param coordStatistic The statistic to send to the listeners
+     * @return The success of the method
+     * @throws RemoteException Thrown if the server isn't online
+     */
+    public PtBoolean oeUpdateTimingStatistic(DtCoordStatistic coordStatistic) throws RemoteException;
 
     /**
      * Allows a user to update bio.
