@@ -1169,6 +1169,7 @@ public class IcrashSystemImpl extends UnicastRemoteObject implements
 
     private void sendStatisticForAdmins(DtCoordStatistic statistic) {
         try {
+            System.err.println("ICrashSystem invoke send");
             Registry registry = LocateRegistry.getRegistry(RmiUtils.getInstance().getHost(), RmiUtils.getInstance().getPort());
             IcrashEnvironment env = (IcrashEnvironment) registry.lookup("iCrashEnvironment");
             for (String adminKey : env.getAdministrators().keySet()) {

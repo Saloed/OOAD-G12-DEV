@@ -16,6 +16,7 @@ import javafx.application.Platform;
 import javafx.beans.property.ReadOnlyObjectWrapper;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
+import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
@@ -588,9 +589,13 @@ public abstract class AbstractGUIController implements Initializable {
      * @param table The tableview to add the data to
      * @param list  the list of items to add to the tableview
      */
-    public void addStatsToTableView(TableView<DtCoordStatistic> table, Collection<? extends DtCoordStatistic> list) {
+    public void addStatsToTableView(TableView<TableViewDtCoordStatisticWrapper> table, Collection<? extends DtCoordStatistic> list) {
         table.getItems().clear();
-        table.getItems().addAll(list);
+        ObservableList<TableViewDtCoordStatisticWrapper> data
+                = FXCollections.observableArrayList(list.stream()
+                .map(TableViewDtCoordStatisticWrapper::new)
+                .collect(Collectors.toList()));
+        table.setItems(data);
     }
 
     /**

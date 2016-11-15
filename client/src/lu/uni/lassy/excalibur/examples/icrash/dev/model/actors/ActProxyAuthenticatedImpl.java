@@ -131,8 +131,9 @@ public abstract class ActProxyAuthenticatedImpl extends UnicastRemoteObject impl
     /* (non-Javadoc)
          * @see lu.uni.lassy.excalibur.examples.icrash.dev.java.environment.actors.ActProxyAuthenticated#oeUpdateTimingStatistic
          */
-    public PtBoolean oeUpdateTimingStatistic(DtCoordStatistic coordStatistic)
-            throws RemoteException {
+    public PtBoolean oeUpdateTimingStatistic(DtCoordStatistic coordStatistic) throws RemoteException {
+        System.err.println("ActProxyAuthenticatedImpl invoke update");
+
         if (!mapCoordStatistic.containsKey(coordStatistic.coordId.value.getValue())) {
             mapCoordStatistic.put(coordStatistic.coordId.value.getValue(), coordStatistic);
 

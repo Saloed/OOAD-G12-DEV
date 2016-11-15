@@ -78,9 +78,9 @@
                      <center>
                         <TableView fx:id="tableCoordStats" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                           <columns>
-                              <TableColumn prefWidth="75.0" text="Coord ID" />
-                            <TableColumn prefWidth="75.0" text="State" />
-                            <TableColumn prefWidth="75.0" text="Time" />
+                              <TableColumn fx:id="colCoordId" prefWidth="75.0" text="Coord ID" />
+                              <TableColumn fx:id="colState" prefWidth="75.0" text="State" />
+                              <TableColumn fx:id="colTime" prefWidth="75.0" text="Time" />
                           </columns>
                         </TableView>
                      </center>

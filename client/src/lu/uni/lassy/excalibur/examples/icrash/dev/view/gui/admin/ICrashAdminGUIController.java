@@ -18,10 +18,8 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
@@ -43,6 +41,7 @@ import lu.uni.lassy.excalibur.examples.icrash.dev.java.types.stdlib.PtString;
 import lu.uni.lassy.excalibur.examples.icrash.dev.java.utils.Log4JUtils;
 import lu.uni.lassy.excalibur.examples.icrash.dev.model.Message;
 import lu.uni.lassy.excalibur.examples.icrash.dev.view.gui.abstractgui.AbstractAuthGUIController;
+import lu.uni.lassy.excalibur.examples.icrash.dev.view.gui.abstractgui.TableViewDtCoordStatisticWrapper;
 import lu.uni.lassy.excalibur.examples.icrash.dev.view.gui.coordinator.CreateICrashCoordGUI;
 
 import java.net.URL;
@@ -114,7 +113,20 @@ public class ICrashAdminGUIController extends AbstractAuthGUIController {
      * The tableview of the coordinators timing statistic
      */
     @FXML
-    private TableView<DtCoordStatistic> tableCoordStats;
+    private TableView<TableViewDtCoordStatisticWrapper> tableCoordStats;
+
+    /**
+     * Table columns
+     */
+    @FXML
+    private TableColumn<TableViewDtCoordStatisticWrapper, String> colCoordId;
+
+    @FXML
+    private TableColumn<TableViewDtCoordStatisticWrapper, String> colState;
+
+    @FXML
+    private TableColumn<TableViewDtCoordStatisticWrapper, Integer> colTime;
+
 
     /**
      * The tableview of the recieved messages from the system
@@ -223,6 +235,9 @@ public class ICrashAdminGUIController extends AbstractAuthGUIController {
      */
     public void setUpTables() {
         setUpMessageTables(tblvwAdminMessages);
+        colCoordId.setCellValueFactory(new PropertyValueFactory<TableViewDtCoordStatisticWrapper, String>("coordId"));
+        colState.setCellValueFactory(new PropertyValueFactory<TableViewDtCoordStatisticWrapper, String>("state"));
+        colTime.setCellValueFactory(new PropertyValueFactory<TableViewDtCoordStatisticWrapper, Integer>("time"));
     }
 
     /**
@@ -369,7 +384,7 @@ public class ICrashAdminGUIController extends AbstractAuthGUIController {
                         userController.getAuthImpl().mapCoordStatistic.addListener(new MapChangeListener<String, DtCoordStatistic>() {
                             @Override
                             public void onChanged(Change<? extends String, ? extends DtCoordStatistic> change) {
-                                addStatsToTableView(tableCoordStats,change.getMap().values());
+                                addStatsToTableView(tableCoordStats, change.getMap().values());
                             }
                         });
                     } catch (Exception e) {
