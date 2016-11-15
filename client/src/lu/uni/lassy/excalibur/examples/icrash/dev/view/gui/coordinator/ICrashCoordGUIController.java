@@ -182,6 +182,13 @@ public class ICrashCoordGUIController extends AbstractAuthGUIController {
      */
     @FXML
     private Button bttnCoordLogoff;
+
+    /**
+     * The button that allows a user to change bio.
+     */
+    @FXML
+    private Button bttnBioUpdate;
+
     /**
      * The user controller, for this GUI it's the coordinator controller and allows access to coordinator functions like reporting on crises.
      */
@@ -216,6 +223,18 @@ public class ICrashCoordGUIController extends AbstractAuthGUIController {
     void bttnCoordLogoff_OnClick(ActionEvent event) {
         logoff();
     }
+
+    /**
+     * Button event that deals with updating bio the user
+     *
+     * @param event The event type fired, we do not need it's details
+     */
+    @FXML
+    void bttnBioUpdate_OnClick(ActionEvent event) {
+        updateBio();
+    }
+
+
 
     /**
      * Button event that deals with logging on the user
@@ -499,6 +518,14 @@ public class ICrashCoordGUIController extends AbstractAuthGUIController {
             }
         } else
             showWarningNoDataEntered();
+    }
+
+    private void updateBio(){
+        try {
+            userController.oeUpdateBio();
+        } catch (ServerOfflineException | ServerNotBoundException e) {
+            showExceptionErrorMessage(e);
+        }
     }
 
     private void faceLogon() {

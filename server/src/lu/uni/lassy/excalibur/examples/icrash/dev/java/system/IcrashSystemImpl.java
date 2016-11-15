@@ -111,7 +111,7 @@ public class IcrashSystemImpl extends UnicastRemoteObject implements
     Hashtable<CtHuman, ActComCompany> assCtHumanActComCompany = new Hashtable<>();
 
 	/*
-	 * ********************************
+     * ********************************
 	 * Internal operations 
 	 * *********************************.
 	 */
@@ -1180,6 +1180,36 @@ public class IcrashSystemImpl extends UnicastRemoteObject implements
             return new PtBoolean(true);
         } catch (Exception e) {
             log.error("Exception in oeLogout..." + e);
+        }
+        return new PtBoolean(false);
+    }
+
+    /* (non-Javadoc)
+       * @see lu.uni.lassy.excalibur.examples.icrash.dev.java.system.IcrashSystem#oeUpdateBio()
+       */
+    public PtBoolean oeUpdateBio(DtBiometric bio) throws RemoteException {
+        try {
+            //PreP1
+            isSystemStarted();
+            //PreP2
+            isUserLoggedIn();
+            log.debug("current Requesting Authenticated Actor Instance is "
+                    + currentRequestingAuthenticatedActor.getLogin().value.getValue());
+            CtAuthenticated ctAuth = getCtAuthenticated(currentRequestingAuthenticatedActor);
+            log.debug("current Associated CtAuthenticated Instance is " + ctAuth.toString());
+            if (ctAuth != null) {
+                String key = ctAuth.login.value.getValue();
+                CtAuthenticated user = cmpSystemCtAuthenticated.get(key);
+                //PostP1
+                user.bio = new DtBiometric(bio.value);
+                //PostF1
+                PtString aMessage = new PtString(
+                        "Your biometric successfully updated");
+                currentRequestingAuthenticatedActor.ieMessage(aMessage);
+            }
+            return new PtBoolean(true);
+        } catch (Exception e) {
+            log.error("Exception in oeUpdateBio..." + e);
         }
         return new PtBoolean(false);
     }

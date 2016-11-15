@@ -6,10 +6,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="02da47f0-f25f-4282-912d-09fd238577db" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/lu/uni/lassy/excalibur/examples/icrash/dev/controller/BiometricAuthController.java" afterPath="$PROJECT_DIR$/client/src/lu/uni/lassy/excalibur/examples/icrash/dev/controller/BiometricAuthController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/commons/src/lu/uni/lassy/excalibur/examples/icrash/dev/java/system/types/primary/DtBiometric.java" afterPath="$PROJECT_DIR$/commons/src/lu/uni/lassy/excalibur/examples/icrash/dev/java/system/types/primary/DtBiometric.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/lu/uni/lassy/excalibur/examples/icrash/dev/controller/AbstractUserController.java" afterPath="$PROJECT_DIR$/client/src/lu/uni/lassy/excalibur/examples/icrash/dev/controller/AbstractUserController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/lu/uni/lassy/excalibur/examples/icrash/dev/model/actors/ActProxyAuthenticatedImpl.java" afterPath="$PROJECT_DIR$/client/src/lu/uni/lassy/excalibur/examples/icrash/dev/model/actors/ActProxyAuthenticatedImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/lu/uni/lassy/excalibur/examples/icrash/dev/view/gui/coordinator/ICrashCoordGUI.fxml" afterPath="$PROJECT_DIR$/client/src/lu/uni/lassy/excalibur/examples/icrash/dev/view/gui/coordinator/ICrashCoordGUI.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/lu/uni/lassy/excalibur/examples/icrash/dev/view/gui/coordinator/ICrashCoordGUIController.java" afterPath="$PROJECT_DIR$/client/src/lu/uni/lassy/excalibur/examples/icrash/dev/view/gui/coordinator/ICrashCoordGUIController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/commons/src/lu/uni/lassy/excalibur/examples/icrash/dev/java/environment/actors/ActAuthenticated.java" afterPath="$PROJECT_DIR$/commons/src/lu/uni/lassy/excalibur/examples/icrash/dev/java/environment/actors/ActAuthenticated.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/commons/src/lu/uni/lassy/excalibur/examples/icrash/dev/java/environment/actors/ActProxyAuthenticated.java" afterPath="$PROJECT_DIR$/commons/src/lu/uni/lassy/excalibur/examples/icrash/dev/java/environment/actors/ActProxyAuthenticated.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/commons/src/lu/uni/lassy/excalibur/examples/icrash/dev/java/system/IcrashSystem.java" afterPath="$PROJECT_DIR$/commons/src/lu/uni/lassy/excalibur/examples/icrash/dev/java/system/IcrashSystem.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/src/lu/uni/lassy/excalibur/examples/icrash/dev/java/environment/actors/ActAuthenticatedImpl.java" afterPath="$PROJECT_DIR$/server/src/lu/uni/lassy/excalibur/examples/icrash/dev/java/environment/actors/ActAuthenticatedImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/src/lu/uni/lassy/excalibur/examples/icrash/dev/java/system/IcrashSystemImpl.java" afterPath="$PROJECT_DIR$/server/src/lu/uni/lassy/excalibur/examples/icrash/dev/java/system/IcrashSystemImpl.java" />
     </list>
     <ignored path="iCrash.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -191,18 +197,18 @@
         <option value="$PROJECT_DIR$/client/src/lu/uni/lassy/excalibur/examples/icrash/dev/view/gui/abstractgui/AbstractGUIController.java" />
         <option value="$PROJECT_DIR$/client/src/lu/uni/lassy/excalibur/examples/icrash/dev/view/gui/admin/ICrashAdminGUIController.java" />
         <option value="$PROJECT_DIR$/client/src/lu/uni/lassy/excalibur/examples/icrash/dev/controller/CoordinatorController.java" />
+        <option value="$PROJECT_DIR$/commons/src/lu/uni/lassy/excalibur/examples/icrash/dev/java/system/types/primary/CtAuthenticated.java" />
+        <option value="$PROJECT_DIR$/commons/src/lu/uni/lassy/excalibur/examples/icrash/dev/java/system/types/primary/DtBiometric.java" />
+        <option value="$PROJECT_DIR$/client/src/lu/uni/lassy/excalibur/examples/icrash/dev/controller/BiometricAuthController.java" />
+        <option value="$PROJECT_DIR$/client/src/lu/uni/lassy/excalibur/examples/icrash/dev/view/gui/admin/CreateICrashAdminGUI.java" />
+        <option value="$PROJECT_DIR$/client/src/lu/uni/lassy/excalibur/examples/icrash/dev/view/gui/coordinator/ICrashCoordGUIController.java" />
+        <option value="$PROJECT_DIR$/client/src/lu/uni/lassy/excalibur/examples/icrash/dev/controller/AbstractUserController.java" />
+        <option value="$PROJECT_DIR$/commons/src/lu/uni/lassy/excalibur/examples/icrash/dev/java/environment/actors/ActProxyAuthenticated.java" />
+        <option value="$PROJECT_DIR$/client/src/lu/uni/lassy/excalibur/examples/icrash/dev/model/actors/ActProxyAuthenticatedImpl.java" />
         <option value="$PROJECT_DIR$/commons/src/lu/uni/lassy/excalibur/examples/icrash/dev/java/environment/actors/ActAuthenticated.java" />
         <option value="$PROJECT_DIR$/server/src/lu/uni/lassy/excalibur/examples/icrash/dev/java/environment/actors/ActAuthenticatedImpl.java" />
         <option value="$PROJECT_DIR$/commons/src/lu/uni/lassy/excalibur/examples/icrash/dev/java/system/IcrashSystem.java" />
-        <option value="$PROJECT_DIR$/commons/src/lu/uni/lassy/excalibur/examples/icrash/dev/java/system/types/primary/CtAuthenticated.java" />
-        <option value="$PROJECT_DIR$/commons/src/lu/uni/lassy/excalibur/examples/icrash/dev/java/environment/actors/ActProxyAuthenticated.java" />
-        <option value="$PROJECT_DIR$/client/src/lu/uni/lassy/excalibur/examples/icrash/dev/model/actors/ActProxyAuthenticatedImpl.java" />
         <option value="$PROJECT_DIR$/server/src/lu/uni/lassy/excalibur/examples/icrash/dev/java/system/IcrashSystemImpl.java" />
-        <option value="$PROJECT_DIR$/client/src/lu/uni/lassy/excalibur/examples/icrash/dev/view/gui/coordinator/ICrashCoordGUIController.java" />
-        <option value="$PROJECT_DIR$/commons/src/lu/uni/lassy/excalibur/examples/icrash/dev/java/system/types/primary/DtBiometric.java" />
-        <option value="$PROJECT_DIR$/client/src/lu/uni/lassy/excalibur/examples/icrash/dev/controller/AbstractUserController.java" />
-        <option value="$PROJECT_DIR$/client/src/lu/uni/lassy/excalibur/examples/icrash/dev/controller/BiometricAuthController.java" />
-        <option value="$PROJECT_DIR$/client/src/lu/uni/lassy/excalibur/examples/icrash/dev/view/gui/admin/CreateICrashAdminGUI.java" />
       </list>
     </option>
   </component>
@@ -241,7 +247,7 @@
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="PackagesPane" proportions="" version="1">
+    <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -310,29 +316,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="creator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="iCrash" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="client" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lu.uni.lassy.excalibur.examples.icrash.dev" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="view.gui" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="admin" />
+              <option name="myItemId" value="coordinator" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -371,7 +355,14 @@
         </subPane>
       </pane>
       <pane id="ProjectPane">
-        <subPane />
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="iCrash" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
       </pane>
       <pane id="Scope" />
     </panes>
@@ -873,7 +864,7 @@
       <workItem from="1478645086247" duration="435000" />
       <workItem from="1478683173691" duration="4310000" />
       <workItem from="1479166957179" duration="2092000" />
-      <workItem from="1479170281295" duration="6730000" />
+      <workItem from="1479170281295" duration="8363000" />
     </task>
     <task id="LOCAL-00001" summary="added BioAPI lib">
       <created>1479170367338</created>
@@ -903,11 +894,18 @@
       <option name="project" value="LOCAL" />
       <updated>1479174507407</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="bug fixed">
+      <created>1479177063568</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1479177063568</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13567000" />
+    <option name="totallyTimeSpent" value="15200000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -925,7 +923,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19619326" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19619326" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="JProfiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32868218" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1005,7 +1003,8 @@
     <MESSAGE value="added Biometric datatype" />
     <MESSAGE value="added bio data provider" />
     <MESSAGE value="added biometric authentication" />
-    <option name="LAST_COMMIT_MESSAGE" value="added biometric authentication" />
+    <MESSAGE value="bug fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="bug fixed" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1029,25 +1028,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/client/src/lu/uni/lassy/excalibur/examples/icrash/dev/view/gui/coordinator/ICrashCoordGUI.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1122">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/commons/libs/BioAPIJava.jar!/org/bioapi/template/DataFactory_Implemented.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-759">
-          <caret line="37" column="38" selection-start-line="37" selection-start-column="38" selection-end-line="37" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/commons/libs/BioAPIJava.jar!/org/bioapi/template/BFP_Implemented.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="20">
@@ -1141,48 +1121,6 @@
         <state relative-caret-position="34">
           <caret line="36" column="16" selection-start-line="36" selection-start-column="16" selection-end-line="36" selection-end-column="16" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/commons/src/lu/uni/lassy/excalibur/examples/icrash/dev/java/environment/actors/ActProxyAuthenticated.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="62" column="21" selection-start-line="62" selection-start-column="21" selection-end-line="62" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/src/lu/uni/lassy/excalibur/examples/icrash/dev/java/system/IcrashSystemImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="1101" column="21" selection-start-line="1101" selection-start-column="21" selection-end-line="1101" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/lu/uni/lassy/excalibur/examples/icrash/dev/controller/CoordinatorController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-17">
-          <caret line="43" column="7" selection-start-line="43" selection-start-column="7" selection-end-line="43" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/commons/src/lu/uni/lassy/excalibur/examples/icrash/dev/java/system/IcrashSystem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="322" column="21" selection-start-line="322" selection-start-column="21" selection-end-line="322" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/lu/uni/lassy/excalibur/examples/icrash/dev/view/gui/coordinator/ICrashCoordGUIController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1860">
-          <caret line="235" column="56" selection-start-line="235" selection-start-column="56" selection-end-line="235" selection-end-column="56" />
-          <folding>
-            <element signature="e#7588#7589#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1302,14 +1240,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/readme.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="62" column="18" selection-start-line="62" selection-start-column="10" selection-end-line="62" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/commons/src/lu/uni/lassy/excalibur/examples/icrash/dev/java/utils/Log4JUtils.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="256">
@@ -1366,34 +1296,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/lu/uni/lassy/excalibur/examples/icrash/dev/controller/AbstractUserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="70" column="56" selection-start-line="70" selection-start-column="56" selection-end-line="70" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_73/src.zip!/java/util/List.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="237" column="12" selection-start-line="237" selection-start-column="12" selection-end-line="237" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/src/lu/uni/lassy/excalibur/examples/icrash/dev/java/environment/actors/ActAuthenticatedImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="867">
-          <caret line="119" column="35" selection-start-line="119" selection-start-column="34" selection-end-line="119" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/commons/src/lu/uni/lassy/excalibur/examples/icrash/dev/java/environment/actors/ActAuthenticated.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="76" column="16" selection-start-line="76" selection-start-column="16" selection-end-line="76" selection-end-column="16" />
           <folding />
         </state>
       </provider>
@@ -1430,8 +1336,8 @@
         <state relative-caret-position="179">
           <caret line="345" column="0" selection-start-line="345" selection-start-column="0" selection-end-line="345" selection-end-column="0" />
           <folding>
-            <element signature="e#6413#6414#0" expanded="true" />
-            <element signature="e#6436#6437#0" expanded="true" />
+            <element signature="e#6413#6414#0" expanded="false" />
+            <element signature="e#6436#6437#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1457,10 +1363,101 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/lu/uni/lassy/excalibur/examples/icrash/dev/view/gui/coordinator/ICrashCoordGUI.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/lu/uni/lassy/excalibur/examples/icrash/dev/controller/CoordinatorController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-204">
+          <caret line="65" column="17" selection-start-line="65" selection-start-column="17" selection-end-line="65" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/lu/uni/lassy/excalibur/examples/icrash/dev/view/gui/coordinator/CreateICrashCoordGUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/lu/uni/lassy/excalibur/examples/icrash/dev/view/gui/coordinator/ICrashCoordGUIController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="194" column="17" selection-start-line="194" selection-start-column="17" selection-end-line="194" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/lu/uni/lassy/excalibur/examples/icrash/dev/controller/AbstractUserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="387">
+          <caret line="110" column="44" selection-start-line="110" selection-start-column="44" selection-end-line="110" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/commons/src/lu/uni/lassy/excalibur/examples/icrash/dev/java/environment/actors/ActProxyAuthenticated.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="503">
+          <caret line="97" column="35" selection-start-line="97" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/client/src/lu/uni/lassy/excalibur/examples/icrash/dev/model/actors/ActProxyAuthenticatedImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-55">
-          <caret line="135" column="37" selection-start-line="135" selection-start-column="37" selection-end-line="135" selection-end-column="37" />
+        <state relative-caret-position="205">
+          <caret line="100" column="45" selection-start-line="100" selection-start-column="45" selection-end-line="100" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/src/lu/uni/lassy/excalibur/examples/icrash/dev/java/environment/actors/ActAuthenticatedImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="165" column="48" selection-start-line="165" selection-start-column="48" selection-end-line="165" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/commons/src/lu/uni/lassy/excalibur/examples/icrash/dev/java/system/IcrashSystem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1067">
+          <caret line="377" column="30" selection-start-line="377" selection-start-column="0" selection-end-line="378" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/src/lu/uni/lassy/excalibur/examples/icrash/dev/java/system/IcrashSystemImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="1206" column="63" selection-start-line="1206" selection-start-column="63" selection-end-line="1206" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/commons/src/lu/uni/lassy/excalibur/examples/icrash/dev/java/environment/actors/ActAuthenticated.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="778">
+          <caret line="103" column="26" selection-start-line="103" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/readme.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="413">
+          <caret line="62" column="18" selection-start-line="62" selection-start-column="10" selection-end-line="62" selection-end-column="18" />
           <folding />
         </state>
       </provider>

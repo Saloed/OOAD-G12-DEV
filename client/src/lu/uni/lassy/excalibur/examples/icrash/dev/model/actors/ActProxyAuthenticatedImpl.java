@@ -94,6 +94,13 @@ public abstract class ActProxyAuthenticatedImpl extends UnicastRemoteObject impl
     public PtBoolean oeBioLogin(DtLogin aDtLogin, DtBiometric aDtBiometric) throws RemoteException, NotBoundException {
         return this._serverSideActor.oeBioLogin(aDtLogin, aDtBiometric);
     }
+    /* (non-Javadoc)
+     * @see lu.uni.lassy.excalibur.examples.icrash.dev.java.environment.actors.ActProxyAuthenticated#oeUpdateBio
+     */
+    public PtBoolean oeUpdateBio(DtBiometric bio) throws RemoteException, NotBoundException{
+        return this._serverSideActor.oeUpdateBio(bio);
+    }
+
 
     /* (non-Javadoc)
      * @see lu.uni.lassy.excalibur.examples.icrash.dev.java.environment.actors.ActProxyAuthenticated#oeLogout()

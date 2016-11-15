@@ -93,4 +93,13 @@ public interface ActAuthenticated extends java.rmi.Remote, Serializable, JIntIsA
      * @throws RemoteException Thrown if the server isn't online
      */
     public PtBoolean ieMessage(PtString aMessage) throws RemoteException;
+
+    /**
+     * Allows a user to update bio.
+     *
+     * @return The success of the method
+     * @throws RemoteException   Thrown if the server isn't online
+     * @throws NotBoundException Thrown if the server has not been bound in the RMI settings
+     */
+   public PtBoolean oeUpdateBio(DtBiometric bio) throws RemoteException, NotBoundException;
 }

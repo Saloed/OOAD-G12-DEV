@@ -183,7 +183,7 @@ public interface IcrashSystem extends Remote {
      * @throws RemoteException Thrown if the server is offline
      */
     public ActComCompany getActComCompany(String name) throws RemoteException;
-	
+
 	/*
 	 * ************************
 	 * System operations 
@@ -315,7 +315,7 @@ public interface IcrashSystem extends Remote {
     /**
      * Processes a login for the username and biometric data specified.
      *
-     * @param aDtLogin    The username to login with
+     * @param aDtLogin     The username to login with
      * @param aDtBiometric The biometric data to login with
      * @return The success of the method
      * @throws RemoteException Thrown if the server is offline
@@ -368,4 +368,12 @@ public interface IcrashSystem extends Remote {
      */
     public PtBoolean oeSetClock(DtDateAndTime aCurrentClock) throws RemoteException;
 
+
+    /**
+     * Processes a update bio for the current authenticating actor.
+     *
+     * @return The success of the method
+     * @throws RemoteException Thrown if the server is offline
+     */
+    public PtBoolean oeUpdateBio(DtBiometric bio) throws RemoteException;
 }

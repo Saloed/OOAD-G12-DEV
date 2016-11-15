@@ -99,6 +99,26 @@ public abstract class AbstractUserController implements HasListeners {
     }
 
     /**
+     * The method that allows the user to update bio.
+     *
+     * @return The success of the method
+     * @throws ServerOfflineException  Thrown if the server is currently offline
+     * @throws ServerNotBoundException Thrown if the server hasn't been bound in the RMI settings
+     */
+    public PtBoolean oeUpdateBio() throws ServerOfflineException, ServerNotBoundException {
+        DtBiometric bio = this.bioDataProvider.getData();
+        try {
+            return this.getAuth().oeUpdateBio(bio);
+        } catch (RemoteException e) {
+            Log4JUtils.getInstance().getLogger().error(e);
+            throw new ServerOfflineException();
+        } catch (NotBoundException e) {
+            Log4JUtils.getInstance().getLogger().error(e);
+            throw new ServerNotBoundException();
+        }
+    }
+
+    /**
      * The method that allows the user to logoff.
      *
      * @return The success of the method
