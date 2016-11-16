@@ -286,7 +286,7 @@ public class ICrashAdminGUIController extends AbstractAuthGUIController {
 
         } else {
             pane.add(id, 0, 0);
-            pane.add(confirm, 0, 3);
+            pane.add(confirm, 0, 1);
             pane.setVgap(50);
 
             confirm.setOnAction(event1 -> {

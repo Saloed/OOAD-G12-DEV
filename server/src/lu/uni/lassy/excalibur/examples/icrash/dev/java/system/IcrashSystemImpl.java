@@ -501,7 +501,7 @@ public class IcrashSystemImpl extends UnicastRemoteObject implements
             //implementation done at the level of the init method caller
 
 			/*	ENV
-			PostF 3 the environment for communication company actors, in the post state, is made of
+            PostF 3 the environment for communication company actors, in the post state, is made of
 			AqtyComCompanies instances allowing for receiving and sending messages to humans.
 			*/
             Registry registry = LocateRegistry.getRegistry(RmiUtils.getInstance().getHost(), RmiUtils.getInstance().getPort());

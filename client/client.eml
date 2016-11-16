@@ -5,7 +5,7 @@
 	<lib name="log4j-1.2.16.jar" scope="COMPILE">
 		<relative-module-cls project-related="jar://$PROJECT_DIR$/commons/libs/log4j-1.2.16.jar!/"/>
 	</lib>
-	<levels>
-		<level name="BioAPIJava" value="project"/>
-	</levels>
+	<lib name="BioAPIJava.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/commons/libs/BioAPIJava.jar!/"/>
+	</lib>
 </component>
